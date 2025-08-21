@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Ótica Allegro Vivace - Excelência em óculos e relojoaria em Rolândia. Atendimento personalizado, qualidade e sofisticação.">
+  <meta name="keywords" content="Ótica, Óculos, Relojoaria, Vivace, Allegro, Rolândia, Lentes, Acessórios">
+  <meta name="author" content="Ótica Allegro Vivace">
+  <title>Ótica Allegro Vivace</title>
+
+  <!-- Fontes elegantes -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+  <!-- Ícones -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+
+<header class="topo-elegante">
+  <div class="logo-texto">
+    <h2>ALLEGRO</h2>
+    <h1>VIVACE</h1>
+    <p>Ótica e Relojoaria</p>
+  </div>
+
+  <nav class="menu-navegacao" aria-label="Menu principal">
+    <a href="#oculos">Óculos</a>
+    <a href="#historia">Quem Somos</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  
+  <!-- Botão de acessibilidade -->
+  <button id="btnAcessibilidade" aria-label="Abrir menu de acessibilidade" title="Acessibilidade">
+    <img src="img/icons8-disabled-access-26.png" alt="Acessibilidade">
+  </button>
+
+  <!-- Painel de acessibilidade -->
+  <div id="painelAcessibilidade" aria-hidden="true">
+    <button onclick="aumentarFonte()">Aumentar Fonte</button>
+    <button onclick="diminuirFonte()">Diminuir Fonte</button>
+    <button onclick="modoContraste()">Alto Contraste</button>
+    <button onclick="resetarAcessibilidade()">Resetar</button>
+  </div>
+</header>
+
+<main>
+<section id="oculos">
+  <h2>Modelos em Destaque</h2>
+  <div class="galeria-produtos">
+    <img src="img/OCL3.jpeg" alt="Óculos de grau modelo clássico" class="clicavel">
+    <img src="img/OCL2.jpg" alt="Óculos de sol preto elegante" class="clicavel">
+    <img src="img/ANA H.webp" alt="Óculos feminino de armação clara" class="clicavel">
+    <img src="img/OCL.jpg" alt="Óculos masculino sofisticado" class="clicavel">
+    <img src="img/OCL4.jpeg" alt="Óculos moderno com design refinado" class="clicavel">
+  </div>
+</section>
+
+<section id="historia">
+  <h2>Quem Somos</h2>
+
+  <div class="bloco-historia">
+    <p>
+      Somos uma empresa do ramo óptico e relojoeiro, dedicada à excelência no atendimento personalizado e humanizado, oferecendo aos nossos clientes produtos de altíssima qualidade e beleza, em um ambiente extremamente agradável e aconchegante. Acreditamos que nossos clientes merecem o melhor — com transparência e confiança — pois são parte fundamental da nossa história.
+    </p>
+  </div>
+
+  <div class="bloco-historia">
+    <h3>Missão</h3>
+    <p>Exercer com excelência o atendimento personalizado e humanizado, com produtos de altíssima qualidade e beleza em um ambiente extremamente agradável e acolhedor.</p>
+  </div>
+
+  <div class="bloco-historia">
+    <h3>Visão</h3>
+    <p>Ser procurados e reconhecidos por cumprir nossa missão e valores em Rolândia e toda a região.</p>
+  </div>
+
+  <div class="bloco-historia">
+    <h3>Valores</h3>
+    <ul>
+      <li><strong>Transparência:</strong> transmitir informações completas, objetivas e confiáveis.</li>
+      <li><strong>Confiança:</strong> oferecer segurança e convicção sobre nosso ramo de atuação.</li>
+      <li><strong>Humanização:</strong> tratar os clientes com atenção, respeito e empatia.</li>
+      <li><strong>Qualidade:</strong> superar expectativas de desempenho e performance.</li>
+    </ul>
+  </div>
+
+  <div class="bloco-historia">
+    <h3>Nosso Propósito</h3>
+    <p>Proporcionar qualidade de visão para nossos clientes.</p>
+  </div>
+</section>
+
+<section id="galeria">
+  <h2>Ambiente Sofisticado</h2>
+  <div class="fotos">
+    <img src="img/2023-09-21 (2).webp" alt="Interior da ótica com ambiente sofisticado" class="clicavel">
+    <img src="img/expo.jpeg" alt="Expositor de óculos modernos" class="clicavel">
+  </div>
+</section>
+
+<section id="contato">
+  <h2>Fale Conosco</h2>
+  <div class="redes-contato">
+    <a href="https://api.whatsapp.com/send?phone=5543996807114" target="_blank" aria-label="Conversar pelo WhatsApp" class="btn-social">
+      <img src="img/whatsapp.png" alt="WhatsApp"> WhatsApp
+    </a>
+    <a href="https://www.instagram.com/vivace.rolandia/" target="_blank" aria-label="Visitar nosso Instagram" class="btn-social">
+      <img src="img/instagram.png" alt="Instagram"> Instagram
+    </a>
+  </div>
+</section>
+</main>
+
+<!-- Botão Voltar ao Topo -->
+<button id="voltarTopo" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
+
+<!-- Rodapé -->
+<footer class="rodape">
+  <p>Copyright 2025 ©️ Allegro Vivace. Todos os Direitos Reservados.</p>
+</footer>
+
+
+<script>
+  // Botão voltar ao topo
+  const btnTopo = document.getElementById("voltarTopo");
+  window.addEventListener("scroll", () => {
+    btnTopo.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+  btnTopo.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // Acessibilidade
+  const btnAcessibilidade = document.getElementById("btnAcessibilidade");
+  const painel = document.getElementById("painelAcessibilidade");
+  let fonteAtual = 100;
+  let contrasteAtivo = false;
+
+  btnAcessibilidade.addEventListener("click", () => {
+    painel.style.display = painel.style.display === "block" ? "none" : "block";
+    painel.setAttribute("aria-hidden", painel.style.display !== "block");
+  });
+
+  function aumentarFonte() {
+    fonteAtual += 10;
+    document.body.style.fontSize = fonteAtual + "%";
+  }
+
+  function diminuirFonte() {
+    if (fonteAtual > 50) {
+      fonteAtual -= 10;
+      document.body.style.fontSize = fonteAtual + "%";
+    }
+  }
+
+  function modoContraste() {
+    contrasteAtivo = !contrasteAtivo;
+    document.body.style.backgroundColor = contrasteAtivo ? "#000" : "#fff";
+    document.body.style.color = contrasteAtivo ? "#fff" : "#111";
+    document.querySelectorAll("a").forEach(link => link.style.color = contrasteAtivo ? "#ffff00" : "");
+  }
+
+  function resetarAcessibilidade() {
+    fonteAtual = 100;
+    contrasteAtivo = false;
+    document.body.style.fontSize = "100%";
+    document.body.style.backgroundColor = "#fff";
+    document.body.style.color = "#111";
+    painel.style.display = "none";
+    document.querySelectorAll("a").forEach(link => link.style.color = "");
+  }
+</script>
+
+</body>
+</html>
