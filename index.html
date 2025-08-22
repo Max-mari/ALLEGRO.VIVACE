@@ -1,54 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Ótica Allegro Vivace - Excelência em óculos e relojoaria em Rolândia. Atendimento personalizado, qualidade e sofisticação.">
-  <meta name="keywords" content="Ótica, Óculos, Relojoaria, Vivace, Allegro, Rolândia, Lentes, Acessórios">
-  <meta name="author" content="Ótica Allegro Vivace">
-  <title>Ótica Allegro Vivace</title>
-
-  <!-- Fontes elegantes -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
-
-  <!-- CSS interno -->
-  <style>
-    * {margin:0;padding:0;box-sizing:border-box;}
-    body {font-family:'Segoe UI',sans-serif;background-color:#fff;color:#000;padding-top:120px;line-height:1.6;}
-    header {position:fixed;top:0;width:100%;background-color:#000;color:white;padding:20px 10px;text-align:center;z-index:1000;transition:all 0.3s ease;}
-    header.shrink h1, header.shrink p{display:none;}
-    header nav{margin-top:10px;}
-    .topo-elegante{display:flex;justify-content:space-between;align-items:center;padding:20px 60px;background-color:#111;border-bottom:1px solid #9b9a9a;flex-wrap:wrap;}
-    .logo-texto h2{font-family:'Playfair Display',serif;font-size:20px;margin:0;color:#c4a56d;letter-spacing:1.5px;}
-    .logo-texto h1{font-family:'Playfair Display',serif;font-size:32px;margin:0;color:#fff;letter-spacing:2px;}
-    .logo-texto p{margin:0;font-size:13px;color:#ccc;font-weight:300;}
-    .menu-navegacao{display:flex;gap:40px;flex-wrap:wrap;}
-    .menu-navegacao a{text-decoration:none;color:#fff;font-size:16px;transition:color 0.3s ease;position:relative;}
-    .menu-navegacao a::after{content:'';display:block;width:0;height:2px;background:#c4a56d;transition:width 0.3s ease;position:absolute;bottom:-4px;left:0;}
-    .menu-navegacao a:hover::after{width:100%;}
-    .menu-navegacao a:hover{color:#c4a56d;}
-    section{padding:60px 20px;text-align:center;}
-    #historia p{font-family:'Libre Baskerville',serif;font-size:18px;line-height:1.8;color:#111;max-width:850px;margin:20px auto;}
-    #historia ul{list-style:none;margin:20px auto;max-width:600px;padding:0;}
-    #historia ul li{margin-bottom:10px;font-size:18px;}
-    .abas-galeria{display:flex;justify-content:center;gap:15px;margin-bottom:30px;flex-wrap:wrap;}
-    .abas-galeria .aba{padding:10px 20px;border:2px solid #c4a56d;background-color:#111;color:#fff;border-radius:25px;cursor:pointer;transition:all 0.3s ease;font-weight:600;}
-    .abas-galeria .aba.ativa,.abas-galeria .aba:hover{background-color:#c4a56d;color:#000;}
-    .conteudo-galeria{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;padding-bottom:2rem;}
-    .conteudo-galeria .categoria{display:none;justify-content:center;flex-wrap:wrap;gap:15px;}
-    .conteudo-galeria .categoria.ativa{display:flex;}
-    .conteudo-galeria img{width:100%;max-width:280px;height:auto;object-fit:cover;border-radius:10px;cursor:pointer;transition:transform 0.3s ease;}
-    .conteudo-galeria img:hover{transform:scale(1.03);}
-    .redes-contato{display:flex;justify-content:center;gap:20px;margin-top:20px;flex-wrap:wrap;}
-    .btn-social{display:flex;align-items:center;gap:10px;padding:12px 20px;border-radius:30px;background:#111;color:#fff;text-decoration:none;font-weight:600;font-size:16px;transition:all 0.3s ease;box-shadow:0 3px 8px rgba(0,0,0,0.2);}
-    .btn-social img{width:22px;height:22px;}
-    .btn-social:hover{background:#c4a56d;color:#000;}
-    .rodape{background-color:#000;color:#fff;text-align:center;padding:20px;margin-top:40px;font-size:14px;}
-    #voltarTopo{position:fixed;bottom:20px;right:20px;padding:12px;font-size:16px;background-color:#000;color:#fff;border:none;border-radius:50%;cursor:pointer;display:none;transition:background 0.3s ease;}
-    #voltarTopo:hover{background:#c4a56d;color:#000;}
-    #voltarTopo:focus{outline:2px solid #fff;outline-offset:4px;}
-    @media(max-width:768px){.conteudo-galeria img{max-width:45%;}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ótica Allegro Vivace</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -66,39 +23,34 @@
     <a href="#galeria">Galeria</a>
     <a href="#contato">Contato</a>
   </nav>
+
+  <!-- Fotos de óculos topo -->
+  <div class="topo-fotos">
+    <img src="img/oculos1.jpg" alt="Óculos 1">
+    <img src="img/oculos2.jpg" alt="Óculos 2">
+    <img src="img/oculos3.jpg" alt="Óculos 3">
+    <img src="img/oculos4.jpg" alt="Óculos 4">
+    <img src="img/oculos5.jpg" alt="Óculos 5">
+    <img src="img/oculos6.jpg" alt="Óculos 6">
+    <img src="img/oculos7.jpg" alt="Óculos 7">
+    <img src="img/oculos8.jpg" alt="Óculos 8">
+  </div>
 </header>
 
 <main>
+  <!-- QUEM SOMOS -->
   <section id="historia">
     <h2>Quem Somos</h2>
-    <div class="bloco-historia">
-      <p>
-        Somos uma empresa do ramo óptico e relojoeiro, dedicada à excelência no atendimento personalizado e humanizado, oferecendo aos nossos clientes produtos de altíssima qualidade e beleza, em um ambiente extremamente agradável e aconchegante. Acreditamos que nossos clientes merecem o melhor — com transparência e confiança — pois são parte fundamental da nossa história.
-      </p>
-    </div>
-    <div class="bloco-historia">
-      <h3>Missão</h3>
-      <p>Exercer com excelência o atendimento personalizado e humanizado, com produtos de altíssima qualidade e beleza em um ambiente extremamente agradável e acolhedor.</p>
-    </div>
-    <div class="bloco-historia">
-      <h3>Visão</h3>
-      <p>Ser procurados e reconhecidos por cumprir nossa missão e valores em Rolândia e toda a região.</p>
-    </div>
-    <div class="bloco-historia">
-      <h3>Valores</h3>
-      <ul>
-        <li><strong>Transparência:</strong> transmitir informações completas, objetivas e confiáveis.</li>
-        <li><strong>Confiança:</strong> oferecer segurança e convicção sobre nosso ramo de atuação.</li>
-        <li><strong>Humanização:</strong> tratar os clientes com atenção, respeito e empatia.</li>
-        <li><strong>Qualidade:</strong> superar expectativas de desempenho e performance.</li>
-      </ul>
-    </div>
-    <div class="bloco-historia">
-      <h3>Nosso Propósito</h3>
-      <p>Proporcionar qualidade de visão para nossos clientes.</p>
-    </div>
+    <p>Somos uma empresa do ramo óptico e relojoeiro, dedicada à excelência no atendimento personalizado e humanizado, oferecendo aos nossos clientes produtos de altíssima qualidade e beleza, em um ambiente extremamente agradável e aconchegante.</p>
   </section>
 
+  <!-- MISSÃO -->
+  <section id="missao">
+    <h2>Missão</h2>
+    <p>Exercer com excelência o atendimento personalizado e humanizado, com produtos de altíssima qualidade e beleza em um ambiente extremamente agradável e acolhedor.</p>
+  </section>
+
+  <!-- PRODUTOS -->
   <section id="Produtos">
     <h2>Produtos</h2>
     <div class="abas-galeria">
@@ -117,103 +69,67 @@
 
     <div class="conteudo-galeria">
       <div class="categoria ativa" id="acessorios-cat">
-        <img src="img/acessorio1.jpg" alt="Acessório 1" class="clicavel">
-        <img src="img/acessorio2.jpg" alt="Acessório 2" class="clicavel">
+        <img src="img/acessorio1.jpg" alt="Acessório 1">
+        <img src="img/acessorio2.jpg" alt="Acessório 2">
       </div>
       <div class="categoria" id="armacoes-cat">
-        <img src="img/OCL3.jpeg" alt="Armação 1" class="clicavel">
-        <img src="img/OCL2.jpg" alt="Armação 2" class="clicavel">
+        <img src="img/OCL3.jpeg" alt="Armação 1">
+        <img src="img/OCL2.jpg" alt="Armação 2">
       </div>
-      <div class="categoria" id="solares-cat">
-        <img src="img/solar1.jpg" alt="Óculos de Sol 1" class="clicavel">
-        <img src="img/solar2.jpg" alt="Óculos de Sol 2" class="clicavel">
-      </div>
-      <div class="categoria" id="relogios-cat">
-        <img src="img/relogio1.jpg" alt="Relógio 1" class="clicavel">
-        <img src="img/relogio2.jpg" alt="Relógio 2" class="clicavel">
-      </div>
-      <div class="categoria" id="lentes-cat">
-        <img src="img/lente1.jpg" alt="Lente de Contato 1" class="clicavel">
-        <img src="img/lente2.jpg" alt="Lente de Contato 2" class="clicavel">
-      </div>
-      <div class="categoria" id="perfumes-cat">
-        <img src="img/perfume1.jpg" alt="Perfume 1" class="clicavel">
-        <img src="img/perfume2.jpg" alt="Perfume 2" class="clicavel">
-      </div>
-      <div class="categoria" id="semijoias-cat">
-        <img src="img/semijoia1.jpg" alt="Semijóia 1" class="clicavel">
-        <img src="img/semijoia2.jpg" alt="Semijóia 2" class="clicavel">
-      </div>
-      <div class="categoria" id="prata-cat">
-        <img src="img/prata1.jpg" alt="Prata 1" class="clicavel">
-        <img src="img/prata2.jpg" alt="Prata 2" class="clicavel">
-      </div>
-      <div class="categoria" id="aliancas-cat">
-        <img src="img/alianca1.jpg" alt="Aliança 1" class="clicavel">
-        <img src="img/alianca2.jpg" alt="Aliança 2" class="clicavel">
-      </div>
-      <div class="categoria" id="canetas-cat">
-        <img src="img/caneta1.jpg" alt="Caneta 1" class="clicavel">
-        <img src="img/caneta2.jpg" alt="Caneta 2" class="clicavel">
-      </div>
-      <div class="categoria" id="servico-cat">
-        <img src="img/servico1.jpg" alt="Serviço 1" class="clicavel">
-        <img src="img/servico2.jpg" alt="Serviço 2" class="clicavel">
-      </div>
+      <!-- continue com as outras categorias aqui -->
     </div>
+
+    <!-- Botão catálogo -->
+    <a href="https://api.whatsapp.com/send?phone=5543996807114" target="_blank" class="btn-social">Clique aqui e pegue seu catálogo</a>
   </section>
 
+  <!-- GALERIA AMBIENTE -->
   <section id="galeria">
     <h2>Ambiente Sofisticado</h2>
-    <div class="fotos">
-      <img src="img/2023-09-21 (2).webp" alt="Interior da ótica com ambiente sofisticado" class="clicavel">
-      <img src="img/expo.jpeg" alt="Expositor de óculos modernos" class="clicavel">
+    <div class="galeria-ambiente">
+      <img src="img/ambiente1.jpg" alt="Ambiente 1">
+      <img src="img/ambiente2.jpg" alt="Ambiente 2">
+      <img src="img/ambiente3.jpg" alt="Ambiente 3">
+      <img src="img/ambiente4.jpg" alt="Ambiente 4">
     </div>
   </section>
 
+  <!-- CONTATO -->
   <section id="contato">
     <h2>Fale Conosco</h2>
     <div class="redes-contato">
-      <a href="https://api.whatsapp.com/send?phone=5543996807114" target="_blank" aria-label="Conversar pelo WhatsApp" class="btn-social">
+      <a href="https://api.whatsapp.com/send?phone=5543996807114" target="_blank" class="btn-social">
         <img src="img/whatsapp.png" alt="WhatsApp"> WhatsApp
       </a>
-      <a href="https://www.instagram.com/vivace.rolandia/" target="_blank" aria-label="Visitar nosso Instagram" class="btn-social">
+      <a href="https://www.instagram.com/vivace.rolandia/" target="_blank" class="btn-social">
         <img src="img/instagram.png" alt="Instagram"> Instagram
       </a>
     </div>
   </section>
 </main>
 
-<button id="voltarTopo" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
+<button id="voltarTopo" title="Voltar ao topo">↑</button>
 
 <footer class="rodape">
   <p>Copyright 2025 ©️ Allegro Vivace. Todos os Direitos Reservados.</p>
 </footer>
 
 <script>
-  // Voltar ao topo
-  const btnTopo = document.getElementById("voltarTopo");
-  window.addEventListener("scroll", () => {
-    btnTopo.style.display = window.scrollY > 300 ? "block" : "none";
-  });
-  btnTopo.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+const btnTopo = document.getElementById("voltarTopo");
+window.addEventListener("scroll", () => {btnTopo.style.display = window.scrollY > 300 ? "block" : "none";});
+btnTopo.addEventListener("click", () => {window.scrollTo({ top: 0, behavior: "smooth" });});
 
-  // Alternar abas da galeria
-  const abas = document.querySelectorAll(".abas-galeria .aba");
-  const categorias = document.querySelectorAll(".conteudo-galeria .categoria");
-
-  abas.forEach(aba => {
-    aba.addEventListener("click", () => {
-      abas.forEach(a => a.classList.remove("ativa"));
-      categorias.forEach(c => c.classList.remove("ativa"));
-
-      aba.classList.add("ativa");
-      const cat = document.getElementById(aba.dataset.categoria);
-      cat.classList.add("ativa");
-    });
+/* Alternar abas da galeria */
+const abas = document.querySelectorAll(".abas-galeria .aba");
+const categorias = document.querySelectorAll(".conteudo-galeria .categoria");
+abas.forEach(aba => {
+  aba.addEventListener("click", () => {
+    abas.forEach(a => a.classList.remove("ativa"));
+    categorias.forEach(c => c.classList.remove("ativa"));
+    aba.classList.add("ativa");
+    document.getElementById(aba.dataset.categoria).classList.add("ativa");
   });
+});
 </script>
 
 </body>
