@@ -130,48 +130,7 @@ section {
   font-size: 18px;
 }
 
-/* GALERIA */
-.galeria-produtos, .fotos {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.galeria-produtos img, .fotos img {
-  width: 280px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(199, 196, 196, 0.5);
-  cursor: pointer;
-  transition: filter 0.3s, transform 0.3s;
-}
-
-.galeria-produtos .clicavel {
-  position: relative;
-  z-index: 1;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease;
-}
-
-.galeria-produtos .clicavel::before {
-  content: '';
-  position: absolute;
-  top: -15px;
-  left: -15px;
-  right: -15px;
-  bottom: -15px;
-  z-index: -1;
-  background: radial-gradient(rgba(0, 0, 0, 0.25), transparent);
-  filter: blur(12px);
-  border-radius: 15px;
-}
-
-.clicavel:hover {
-  transform: scale(1.03);
-}
-
-/* ABAS GALERIA */
+/* GALERIA DE PRODUTOS */
 .abas-galeria {
   display: flex;
   justify-content: center;
@@ -197,15 +156,37 @@ section {
   color: #000;
 }
 
+.conteudo-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding-bottom: 2rem; /* Evita sobreposição em celular */
+}
+
 .conteudo-galeria .categoria {
   display: none;
   justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 15px;
 }
 
 .conteudo-galeria .categoria.ativa {
   display: flex;
+}
+
+.conteudo-galeria img {
+  width: 100%;
+  max-width: 280px; /* Mesma largura para todas */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.conteudo-galeria img:hover {
+  transform: scale(1.03);
 }
 
 /* BOTÕES REDES SOCIAIS */
@@ -276,4 +257,11 @@ section {
 #voltarTopo:focus {
   outline: 2px solid #fff;
   outline-offset: 4px;
+}
+
+/* RESPONSIVO */
+@media(max-width: 768px) {
+  .conteudo-galeria img {
+    max-width: 45%; /* Ajusta imagens em celular */
+  }
 }
