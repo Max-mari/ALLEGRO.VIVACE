@@ -1,31 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ótica Allegro Vivace</title>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alegro Vivace</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Fontes elegantes -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Libre+Baskerville&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="topo-elegante">
-  <div class="logo-texto">
-    <h2>ALLEGRO</h2>
-    <h1>VIVACE</h1>
-    <p>Ótica e Relojoaria</p>
-  </div>
+  <!-- HEADER -->
+  <header class="topo-elegante">
+    <div class="logo-texto">
+      <h2>Allegro</h2>
+      <h1>Vivace</h1>
+      <p>Ótica e Relojoaria</p>
+    </div>
+    <nav class="menu-navegacao">
+      <a href="#quem-somos">Quem Somos</a>
+      <a href="#missao">Missão</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-  <nav class="menu-navegacao" aria-label="Menu principal">
-    <a href="#missao">Missão</a>
-    <a href="#historia">Quem Somos</a>
-    <a href="#Produtos">Produtos</a>
-    <a href="#galeria">Galeria</a>
-    <a href="#contato">Contato</a>
-  </nav>
-
-  <!-- Fotos de óculos topo -->
-  <div class="topo-fotos">
+  <!-- TOPO FOTOS -->
+  <section class="topo-fotos">
     <img src="img/oculos1.jpg" alt="Óculos 1">
     <img src="img/oculos2.jpg" alt="Óculos 2">
     <img src="img/oculos3.jpg" alt="Óculos 3">
@@ -34,103 +36,99 @@
     <img src="img/oculos6.jpg" alt="Óculos 6">
     <img src="img/oculos7.jpg" alt="Óculos 7">
     <img src="img/oculos8.jpg" alt="Óculos 8">
-  </div>
-</header>
-
-<main>
-  <!-- QUEM SOMOS -->
-  <section id="historia">
-    <h2>Quem Somos</h2>
-    <p>Somos uma empresa do ramo óptico e relojoeiro, dedicada à excelência no atendimento personalizado e humanizado, oferecendo aos nossos clientes produtos de altíssima qualidade e beleza, em um ambiente extremamente agradável e aconchegante.</p>
   </section>
 
-  <!-- MISSÃO -->
-  <section id="missao">
-    <h2>Missão</h2>
-    <p>Exercer com excelência o atendimento personalizado e humanizado, com produtos de altíssima qualidade e beleza em um ambiente extremamente agradável e acolhedor.</p>
-  </section>
+  <main>
+    <!-- QUEM SOMOS -->
+    <section id="quem-somos">
+      <h2>Quem Somos</h2>
+      <p>Somos especialistas em ótica e relojoaria, unindo tradição e sofisticação para oferecer produtos de alto padrão.</p>
+    </section>
 
-  <!-- PRODUTOS -->
-  <section id="Produtos">
-    <h2>Produtos</h2>
-    <div class="abas-galeria">
-      <button class="aba ativa" data-categoria="acessorios-cat">Acessórios</button>
-      <button class="aba" data-categoria="armacoes-cat">Armações</button>
-      <button class="aba" data-categoria="solares-cat">Solares</button>
-      <button class="aba" data-categoria="relogios-cat">Relógio</button>
-      <button class="aba" data-categoria="lentes-cat">Lente de Contato</button>
-      <button class="aba" data-categoria="perfumes-cat">Perfume</button>
-      <button class="aba" data-categoria="semijoias-cat">Semijóis de Luxo</button>
-      <button class="aba" data-categoria="prata-cat">Prata</button>
-      <button class="aba" data-categoria="aliancas-cat">Aliança</button>
-      <button class="aba" data-categoria="canetas-cat">Caneta</button>
-      <button class="aba" data-categoria="servico-cat">Serviço</button>
-    </div>
+    <!-- MISSÃO -->
+    <section id="missao">
+      <h2>Missão</h2>
+      <p>Levar elegância, qualidade e estilo para cada cliente que confia em nosso trabalho.</p>
+    </section>
 
-    <div class="conteudo-galeria">
-      <div class="categoria ativa" id="acessorios-cat">
-        <img src="img/acessorio1.jpg" alt="Acessório 1">
-        <img src="img/acessorio2.jpg" alt="Acessório 2">
+    <!-- PRODUTOS -->
+    <section id="produtos">
+      <h2>Produtos</h2>
+      <div class="abas-galeria">
+        <button class="aba ativa" onclick="mostrarCategoria('oculos')">Óculos</button>
+        <button class="aba" onclick="mostrarCategoria('relogios')">Relógios</button>
+        <button class="aba" onclick="mostrarCategoria('acessorios')">Acessórios</button>
       </div>
-      <div class="categoria" id="armacoes-cat">
-        <img src="img/OCL3.jpeg" alt="Armação 1">
-        <img src="img/OCL2.jpg" alt="Armação 2">
+      <div class="conteudo-galeria">
+        <div id="oculos" class="categoria ativa">
+          <img src="img/produto1.jpg" alt="Óculos 1">
+          <img src="img/produto2.jpg" alt="Óculos 2">
+        </div>
+        <div id="relogios" class="categoria">
+          <img src="img/relogio1.jpg" alt="Relógio 1">
+          <img src="img/relogio2.jpg" alt="Relógio 2">
+        </div>
+        <div id="acessorios" class="categoria">
+          <img src="img/acessorio1.jpg" alt="Acessório 1">
+          <img src="img/acessorio2.jpg" alt="Acessório 2">
+        </div>
       </div>
-      <!-- continue com as outras categorias aqui -->
-    </div>
+    </section>
 
-    <!-- Botão catálogo -->
-    <a href="https://api.whatsapp.com/send?phone=5543996807114" target="_blank" class="btn-social">Clique aqui e pegue seu catálogo</a>
-  </section>
+    <!-- CATÁLOGO -->
+    <section>
+      <h2>Peça seu Catálogo</h2>
+      <a class="btn-social" href="https://wa.me/5500000000000" target="_blank">Clique aqui e fale no WhatsApp</a>
+    </section>
 
-  <!-- GALERIA AMBIENTE -->
-  <section id="galeria">
-    <h2>Ambiente Sofisticado</h2>
-    <div class="galeria-ambiente">
-      <img src="img/ambiente1.jpg" alt="Ambiente 1">
-      <img src="img/ambiente2.jpg" alt="Ambiente 2">
-      <img src="img/ambiente3.jpg" alt="Ambiente 3">
-      <img src="img/ambiente4.jpg" alt="Ambiente 4">
-    </div>
-  </section>
+    <!-- GALERIA -->
+    <section id="galeria">
+      <h2>Ambiente</h2>
+      <div class="galeria-ambiente">
+        <img src="img/ambiente1.jpg" alt="Ambiente 1">
+        <img src="img/ambiente2.jpg" alt="Ambiente 2">
+        <img src="img/ambiente3.jpg" alt="Ambiente 3">
+        <img src="img/ambiente4.jpg" alt="Ambiente 4">
+      </div>
+    </section>
 
-  <!-- CONTATO -->
-  <section id="contato">
-    <h2>Fale Conosco</h2>
-    <div class="redes-contato">
-      <a href="https://api.whatsapp.com/send?phone=5543996807114" target="_blank" class="btn-social">
-        <img src="img/whatsapp.png" alt="WhatsApp"> WhatsApp
-      </a>
-      <a href="https://www.instagram.com/vivace.rolandia/" target="_blank" class="btn-social">
-        <img src="img/instagram.png" alt="Instagram"> Instagram
-      </a>
-    </div>
-  </section>
-</main>
+    <!-- CONTATO -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <div class="redes-contato">
+        <a href="https://wa.me/5500000000000" target="_blank"><img src="img/whatsapp.png" alt=""> WhatsApp</a>
+        <a href="https://instagram.com" target="_blank"><img src="img/instagram.png" alt=""> Instagram</a>
+        <a href="mailto:contato@vivace.com"><img src="img/email.png" alt=""> E-mail</a>
+      </div>
+    </section>
+  </main>
 
-<button id="voltarTopo" title="Voltar ao topo">↑</button>
+  <!-- VOLTAR AO TOPO -->
+  <button id="voltarTopo" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-<footer class="rodape">
-  <p>Copyright 2025 ©️ Allegro Vivace. Todos os Direitos Reservados.</p>
-</footer>
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <p>&copy; 2025 Alegro Vivace - Ótica e Relojoaria. Todos os direitos reservados.</p>
+  </footer>
 
-<script>
-const btnTopo = document.getElementById("voltarTopo");
-window.addEventListener("scroll", () => {btnTopo.style.display = window.scrollY > 300 ? "block" : "none";});
-btnTopo.addEventListener("click", () => {window.scrollTo({ top: 0, behavior: "smooth" });});
+  <!-- SCRIPT PRODUTOS -->
+  <script>
+    function mostrarCategoria(id) {
+      document.querySelectorAll('.categoria').forEach(c => c.classList.remove('ativa'));
+      document.querySelectorAll('.aba').forEach(b => b.classList.remove('ativa'));
+      document.getElementById(id).classList.add('ativa');
+      event.target.classList.add('ativa');
+    }
 
-/* Alternar abas da galeria */
-const abas = document.querySelectorAll(".abas-galeria .aba");
-const categorias = document.querySelectorAll(".conteudo-galeria .categoria");
-abas.forEach(aba => {
-  aba.addEventListener("click", () => {
-    abas.forEach(a => a.classList.remove("ativa"));
-    categorias.forEach(c => c.classList.remove("ativa"));
-    aba.classList.add("ativa");
-    document.getElementById(aba.dataset.categoria).classList.add("ativa");
-  });
-});
-</script>
+    let botaoTopo = document.getElementById("voltarTopo");
+    window.onscroll = () => {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        botaoTopo.style.display = "block";
+      } else {
+        botaoTopo.style.display = "none";
+      }
+    };
+  </script>
 
 </body>
 </html>
