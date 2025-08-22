@@ -11,6 +11,11 @@
   <!-- Fontes elegantes -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
 
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Ícones -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 <body>
 
@@ -24,149 +29,124 @@
   <nav class="menu-navegacao" aria-label="Menu principal">
     <a href="#missao">Missão</a>
     <a href="#historia">Quem Somos</a>
-    <a href="#Produtos">Produtos</a>
+     <a href="#produtos">Produtos</a>
     <a href="#galeria">Galeria</a>
     <a href="#contato">Contato</a>
   </nav>
+  
+  <button id="btnAcessibilidade" aria-label="Abrir menu de acessibilidade" title="Acessibilidade">
+    <img src="img/icons8-disabled-access-26.png" alt="Acessibilidade">
+  </button>
+
+  <div id="painelAcessibilidade" aria-hidden="true">
+    <button onclick="aumentarFonte()">Aumentar Fonte</button>
+    <button onclick="diminuirFonte()">Diminuir Fonte</button>
+    <button onclick="modoContraste()">Alto Contraste</button>
+    <button onclick="resetarAcessibilidade()">Resetar</button>
+  </div>
 </header>
+
 <main>
-
-
+<section id="historia">
+  <h2>Quem Somos</h2>
+  <div class="bloco-historia">
+    <p>
+      Somos uma empresa do ramo óptico e relojoeiro, dedicada à excelência no atendimento personalizado e humanizado, oferecendo aos nossos clientes produtos de altíssima qualidade e beleza, em um ambiente extremamente agradável e aconchegante. Acreditamos que nossos clientes merecem o melhor — com transparência e confiança — pois são parte fundamental da nossa história.
+    </p>
+  </div>
+  <div class="bloco-historia">
+    <h3>Missão</h3>
+    <p>Exercer com excelência o atendimento personalizado e humanizado, com produtos de altíssima qualidade e beleza em um ambiente extremamente agradável e acolhedor.</p>
+  </div>
+  <div class="bloco-historia">
+    <h3>Visão</h3>
+    <p>Ser procurados e reconhecidos por cumprir nossa missão e valores em Rolândia e toda a região.</p>
+  </div>
+  <div class="bloco-historia">
+    <h3>Valores</h3>
+    <ul>
+      <li><strong>Transparência:</strong> transmitir informações completas, objetivas e confiáveis.</li>
+      <li><strong>Confiança:</strong> oferecer segurança e convicção sobre nosso ramo de atuação.</li>
+      <li><strong>Humanização:</strong> tratar os clientes com atenção, respeito e empatia.</li>
+      <li><strong>Qualidade:</strong> superar expectativas de desempenho e performance.</li>
+    </ul>
+  </div>
+  <div class="bloco-historia">
+    <h3>Nosso Propósito</h3>
+    <p>Proporcionar qualidade de visão para nossos clientes.</p>
+  </div>
+</section>
+<section id="oculos">
   <h2>Modelos em Destaque</h2>
-  <div class="galeria-produtos">
-    <img src="img/OCL3.jpeg" alt="Óculos de grau modelo clássico" class="clicavel">
-    <img src="img/OCL2.jpg" alt="Óculos de sol preto elegante" class="clicavel">
-    <img src="img/ANA H.webp" alt="Óculos feminino de armação clara" class="clicavel">
-    <img src="img/OCL.jpg" alt="Óculos masculino sofisticado" class="clicavel">
-    <img src="img/OCL.jpg" alt="Óculos masculino sofisticado" class="clicavel">
-    <img src="img/OCL.jpg" alt="Óculos masculino sofisticado" class="clicavel">
-    <img src="img/OCL.jpg" alt="Óculos masculino sofisticado" class="clicavel">
-    <img src="img/OCL4.jpeg" alt="Óculos moderno com design refinado" class="clicavel">
+
+  <h3>Produtos</h3>
+  <section id="Produtos">
+
+  <h2>Produtos</h2>
+  
+  <div class="abas-galeria">
+    <button class="aba ativa" data-categoria="Armações-cat">Óculos</button>
+    <button class="aba" data-categoria="acessorios-cat">Acessórios</button>
+    <button class="aba" data-categoria="relogios-cat">Relógios</button>
+    <button class="aba" data-categoria="celulares-cat">Celulares</button>
+    <button class="aba" data-categoria="lentes-cat">Lentes de Contato</button>
+    <button class="aba" data-categoria="perfumes-cat">Perfumes</button>
+  </div>
+
+  <div class="conteudo-galeria">
+    <div class="categoria ativa" id="oculos-cat">
+      <img src="img/OCL3.jpeg" alt="Óculos de grau modelo clássico" class="clicavel">
+      <img src="img/OCL2.jpg" alt="Óculos de sol preto elegante" class="clicavel">
+    </div>
+<div class="categoria" id="acessorios-cat">
+  <img src="img/acessorio1.jpg" alt="Estojo de óculos elegante" class="clicavel">
+  <img src="img/acessorio2.jpg" alt="Lenço de limpeza de lentes" class="clicavel">
+</div>
+
+<div class="categoria" id="relogios-cat">
+  <img src="img/relogio1.jpg" alt="Relógio masculino sofisticado" class="clicavel">
+  <img src="img/relogio2.jpg" alt="Relógio feminino elegante" class="clicavel">
+</div>
+
+<div class="categoria" id="ce-cat">
+  <img src="img/celular1.jpg" alt="Smartphone moderno com design premium" class="clicavel">
+  <img src="img/celular2.jpg" alt="Celular elegante com acabamento metálico" class="clicavel">
+</div>
+
+<div class="categoria" id="lentes-cat">
+  <img src="img/lente1.jpg" alt="Lentes de contato coloridas" class="clicavel">
+  <img src="img/lente2.jpg" alt="Lentes de contato transparentes" class="clicavel">
+</div>
+
+<div class="categoria" id="perfumes-cat">
+  <img src="img/perfume1.jpg" alt="Perfume sofisticado feminino" class="clicavel">
+  <img src="img/perfume2.jpg" alt="Perfume masculino elegante" class="clicavel">
+</div>
+</div>
+</section>
+
+<section id="galeria">
+  <h2>Ambiente Sofisticado</h2>
+  <div class="fotos">
+    <img src="img/2023-09-21 (2).webp" alt="Interior da ótica com ambiente sofisticado" class="clicavel">
+    <img src="img/expo.jpeg" alt="Expositor de óculos modernos" class="clicavel">
   </div>
 </section>
 
-<main>
-  <section id="missão">
-  
-    <div class="bloco-historia">
-      <h3>Missão</h3>
-      <p>Exercer com excelência o atendimento personalizado e humanizado, com produtos de altíssima qualidade e beleza em um ambiente extremamente agradável e acolhedor.</p>
-    </div>
-    <div class="bloco-historia">
-      <h3>Visão</h3>
-      <p>Ser procurados e reconhecidos por cumprir nossa missão e valores em Rolândia e toda a região.</p>
-    </div>
-    <div class="bloco-historia">
-      <h3>Valores</h3>
-      <ul>
-        <li><strong>Transparência:</strong> transmitir informações completas, objetivas e confiáveis.</li>
-        <li><strong>Confiança:</strong> oferecer segurança e convicção sobre nosso ramo de atuação.</li>
-        <li><strong>Humanização:</strong> tratar os clientes com atenção, respeito e empatia.</li>
-        <li><strong>Qualidade:</strong> superar expectativas de desempenho e performance.</li>
-      </ul>
-    </div>
-    <div class="bloco-historia">
-      <h3>Nosso Propósito</h3>
-      <p>Proporcionar qualidade de visão para nossos clientes.</p>
-    </div>
-  </section>
-
-  <section id="historia">
-
-     <h2>Quem Somos</h2>
-    <div class="bloco-historia">
-      <p>
-        Somos uma empresa do ramo óptico e relojoeiro, dedicada à excelência no atendimento personalizado e humanizado, oferecendo aos nossos clientes produtos de altíssima qualidade e beleza, em um ambiente extremamente agradável e aconchegante. Acreditamos que nossos clientes merecem o melhor — com transparência e confiança — pois são parte fundamental da nossa história.
-      </p>
-    </div>
-  </section>
-
-  <section id="Produtos">
-    <h2>Produtos</h2>
-    <div class="abas-galeria">
-      <button class="aba ativa" data-categoria="acessorios-cat">Acessórios</button>
-      <button class="aba" data-categoria="armacoes-cat">Armações</button>
-      <button class="aba" data-categoria="solares-cat">Solares</button>
-      <button class="aba" data-categoria="relogios-cat">Relógio</button>
-      <button class="aba" data-categoria="lentes-cat">Lente de Contato</button>
-      <button class="aba" data-categoria="perfumes-cat">Perfume</button>
-      <button class="aba" data-categoria="semijoias-cat">Semijóis de Luxo</button>
-      <button class="aba" data-categoria="prata-cat">Prata</button>
-      <button class="aba" data-categoria="aliancas-cat">Aliança</button>
-      <button class="aba" data-categoria="canetas-cat">Caneta</button>
-      <button class="aba" data-categoria="servico-cat">Serviço</button>
-    </div>
-
-    <div class="conteudo-galeria">
-      <div class="categoria ativa" id="acessorios-cat">
-        <img src="img/acessorio1.jpg" alt="Acessório 1" class="clicavel">
-        <img src="img/acessorio2.jpg" alt="Acessório 2" class="clicavel">
-      </div>
-      <div class="categoria" id="armacoes-cat">
-        <img src="img/OCL3.jpeg" alt="Armação 1" class="clicavel">
-        <img src="img/OCL2.jpg" alt="Armação 2" class="clicavel">
-      </div>
-      <div class="categoria" id="solares-cat">
-        <img src="img/solar1.jpg" alt="Óculos de Sol 1" class="clicavel">
-        <img src="img/solar2.jpg" alt="Óculos de Sol 2" class="clicavel">
-      </div>
-      <div class="categoria" id="relogios-cat">
-        <img src="img/relogio1.jpg" alt="Relógio 1" class="clicavel">
-        <img src="img/relogio2.jpg" alt="Relógio 2" class="clicavel">
-      </div>
-      <div class="categoria" id="lentes-cat">
-        <img src="img/lente1.jpg" alt="Lente de Contato 1" class="clicavel">
-        <img src="img/lente2.jpg" alt="Lente de Contato 2" class="clicavel">
-      </div>
-      <div class="categoria" id="perfumes-cat">
-        <img src="img/perfume1.jpg" alt="Perfume 1" class="clicavel">
-        <img src="img/perfume2.jpg" alt="Perfume 2" class="clicavel">
-      </div>
-      <div class="categoria" id="semijoias-cat">
-        <img src="img/semijoia1.jpg" alt="Semijóia 1" class="clicavel">
-        <img src="img/semijoia2.jpg" alt="Semijóia 2" class="clicavel">
-      </div>
-      <div class="categoria" id="prata-cat">
-        <img src="img/prata1.jpg" alt="Prata 1" class="clicavel">
-        <img src="img/prata2.jpg" alt="Prata 2" class="clicavel">
-      </div>
-      <div class="categoria" id="aliancas-cat">
-        <img src="img/alianca1.jpg" alt="Aliança 1" class="clicavel">
-        <img src="img/alianca2.jpg" alt="Aliança 2" class="clicavel">
-      </div>
-      <div class="categoria" id="canetas-cat">
-        <img src="img/caneta1.jpg" alt="Caneta 1" class="clicavel">
-        <img src="img/caneta2.jpg" alt="Caneta 2" class="clicavel">
-      </div>
-      <div class="categoria" id="servico-cat">
-        <img src="img/servico1.jpg" alt="Serviço 1" class="clicavel">
-        <img src="img/servico2.jpg" alt="Serviço 2" class="clicavel">
-      </div>
-    </div>
-  </section>
-
-  <section id="galeria">
-    <h2>Ambiente Sofisticado</h2>
-    <div class="fotos">
-      <img src="img/2023-09-21 (2).webp" alt="Interior da ótica com ambiente sofisticado" class="clicavel">
-      <img src="img/expo.jpeg" alt="Expositor de óculos modernos" class="clicavel">
-    </div>
-  </section>
-
-  <section id="contato">
-    <h2>Fale Conosco</h2>
-    <div class="redes-contato">
-      <a href="https://api.whatsapp.com/send?phone=5543996807114" target="_blank" aria-label="Conversar pelo WhatsApp" class="btn-social">
-        <img src="img/whatsapp.png" alt="WhatsApp"> WhatsApp
-      </a>
-      <a href="https://www.instagram.com/vivace.rolandia/" target="_blank" aria-label="Visitar nosso Instagram" class="btn-social">
-        <img src="img/instagram.png" alt="Instagram"> Instagram
-      </a>
-    </div>
-  </section>
+<section id="contato">
+  <h2>Fale Conosco</h2>
+  <div class="redes-contato">
+    <a href="https://api.whatsapp.com/send?phone=5543996807114" target="_blank" aria-label="Conversar pelo WhatsApp" class="btn-social">
+      <img src="img/whatsapp.png" alt="WhatsApp"> WhatsApp
+    </a>
+    <a href="https://www.instagram.com/vivace.rolandia/" target="_blank" aria-label="Visitar nosso Instagram" class="btn-social">
+      <img src="img/instagram.png" alt="Instagram"> Instagram
+    </a>
+  </div>
+</section>
 </main>
 
-<button id="voltarTopo" title="Voltar ao topo" aria-label="Voltar ao topo">↨</button>
+<button id="voltarTopo" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
 
 <footer class="rodape">
   <p>Copyright 2025 ©️ Allegro Vivace. Todos os Direitos Reservados.</p>
@@ -181,6 +161,46 @@
   btnTopo.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+  // Acessibilidade
+  const btnAcessibilidade = document.getElementById("btnAcessibilidade");
+  const painel = document.getElementById("painelAcessibilidade");
+  let fonteAtual = 100;
+  let contrasteAtivo = false;
+
+  btnAcessibilidade.addEventListener("click", () => {
+    painel.style.display = painel.style.display === "block" ? "none" : "block";
+    painel.setAttribute("aria-hidden", painel.style.display !== "block");
+  });
+
+  function aumentarFonte() {
+    fonteAtual += 10;
+    document.body.style.fontSize = fonteAtual + "%";
+  }
+
+  function diminuirFonte() {
+    if (fonteAtual > 50) {
+      fonteAtual -= 10;
+      document.body.style.fontSize = fonteAtual + "%";
+    }
+  }
+
+  function modoContraste() {
+    contrasteAtivo = !contrasteAtivo;
+    document.body.style.backgroundColor = contrasteAtivo ? "#000" : "#fff";
+    document.body.style.color = contrasteAtivo ? "#fff" : "#111";
+    document.querySelectorAll("a").forEach(link => link.style.color = contrasteAtivo ? "#ffff00" : "");
+  }
+
+  function resetarAcessibilidade() {
+    fonteAtual = 100;
+    contrasteAtivo = false;
+    document.body.style.fontSize = "100%";
+    document.body.style.backgroundColor = "#fff";
+    document.body.style.color = "#111";
+    painel.style.display = "none";
+    document.querySelectorAll("a").forEach(link => link.style.color = "");
+  }
 
   // Alternar abas da galeria
   const abas = document.querySelectorAll(".abas-galeria .aba");
