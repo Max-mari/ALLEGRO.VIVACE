@@ -140,6 +140,42 @@ main section p {
   box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 }
 
+/* PRODUTOS GRID */
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.produto {
+  background: #f2f2f2;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; /* nome abaixo das imagens */
+  align-items: center;
+  gap: 8px;
+}
+
+.imagens-produto {
+  display: flex;
+  gap: 5px; /* espaço entre as duas imagens */
+}
+
+.imagens-produto img {
+  width: 100px; /* ajuste conforme necessário */
+  height: auto;
+  border-radius: 5px;
+}
+
+.produto:hover {
+  background: #28a745;
+  color: #fff;
+}
+
 /* BOTÃO CATÁLOGO */
 .btn-social {
   display: inline-block;
