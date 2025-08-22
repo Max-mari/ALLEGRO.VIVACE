@@ -1,202 +1,219 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Allegro Vivace</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Ótica Allegro Vivace - Excelência em óculos e relojoaria em Rolândia. Atendimento personalizado, qualidade e sofisticação.">
+  <meta name="keywords" content="Ótica, Óculos, Relojoaria, Vivace, Allegro, Rolândia, Lentes, Acessórios">
+  <meta name="author" content="Ótica Allegro Vivace">
+  <title>Ótica Allegro Vivace</title>
+
+  <!-- Fontes elegantes -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Ícones -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 <body>
-  <!-- Logo -->
-  <header>
-    <h1><span class="allegro">ALLEGRO</span><br><span class="vivace">VIVACE</span></h1>
-    <nav>
-      <ul>
-        <li><a href="#quem-somos">Quem Somos</a></li>
-        <li><a href="#missao">Missão</a></li>
-        <li><a href="#produtos">Produtos</a></li>
-        <li><a href="#galeria">Galeria</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Quem Somos -->
-  <section id="quem-somos">
-    <h2>Quem Somos</h2>
-    <p>A Allegro Vivace nasceu com a missão de unir sofisticação e exclusividade em cada detalhe. 
-       Nosso propósito é oferecer mais do que produtos: criamos experiências únicas para clientes que 
-       buscam qualidade e requinte.</p>
-  </section>
+<header class="topo-elegante">
+  <div class="logo-texto">
+    <h2>ALLEGRO</h2>
+    <h1>VIVACE</h1>
+    <p>Ótica e Relojoaria</p>
+  </div>
 
-  <!-- Missão -->
-  <section id="missao">
-    <h2>Missão</h2>
-    <p>Nosso compromisso é proporcionar excelência, combinando design, inovação e tradição 
-       em cada peça que oferecemos.</p>
-  </section>
-
-  <!-- Destaques -->
-  <section id="destaques">
-    <h2>Modelos em Destaque</h2>
-    <div class="grid">
-      <img src="img/destaque1.jpg" alt="Destaque 1">
-      <img src="img/destaque2.jpg" alt="Destaque 2">
-      <img src="img/destaque3.jpg" alt="Destaque 3">
-      <img src="img/destaque4.jpg" alt="Destaque 4">
-      <img src="img/destaque5.jpg" alt="Destaque 5">
-      <img src="img/destaque6.jpg" alt="Destaque 6">
-      <img src="img/destaque7.jpg" alt="Destaque 7">
-      <img src="img/destaque8.jpg" alt="Destaque 8">
-    </div>
-  </section>
-
-  <!-- Ambiente Sofisticado -->
-  <section id="ambiente">
-    <h2>Ambiente Sofisticado</h2>
-    <div class="grid">
-      <img src="img/amb1.jpg" alt="Ambiente 1">
-      <img src="img/amb2.jpg" alt="Ambiente 2">
-      <img src="img/amb3.jpg" alt="Ambiente 3">
-      <img src="img/amb4.jpg" alt="Ambiente 4">
-    </div>
-  </section>
-
-  <!-- Produtos -->
-  <section id="produtos">
-    <h2>Produtos</h2>
-    <button class="toggle-produtos" onclick="toggleProdutos()">Ver Produtos</button>
-    
-    <div class="produtos-lista" id="lista-produtos">
-      <ul>
-        <li>
-          <button onclick="toggleSubmenu('acessorios')">Acessórios</button>
-          <div class="submenu" id="acessorios">
-            <img src="img/acessorio1.jpg" alt="Acessório 1">
-            <img src="img/acessorio2.jpg" alt="Acessório 2">
-          </div>
-        </li>
-
-        <li>
-          <button onclick="toggleSubmenu('armacoes')">Armações</button>
-          <div class="submenu" id="armacoes">
-            <img src="img/armacao1.jpg" alt="Armação 1">
-            <img src="img/armacao2.jpg" alt="Armação 2">
-          </div>
-        </li>
-
-        <li>
-          <button onclick="toggleSubmenu('solares')">Solares</button>
-          <div class="submenu" id="solares">
-            <img src="img/solar1.jpg" alt="Solar 1">
-            <img src="img/solar2.jpg" alt="Solar 2">
-          </div>
-        </li>
-
-        <li>
-          <button onclick="toggleSubmenu('relogios')">Relógio</button>
-          <div class="submenu" id="relogios">
-            <img src="img/relogio1.jpg" alt="Relógio 1">
-            <img src="img/relogio2.jpg" alt="Relógio 2">
-          </div>
-        </li>
-
-        <li>
-          <button onclick="toggleSubmenu('lentes')">Lentes de Contato</button>
-          <div class="submenu" id="lentes">
-            <img src="img/lente1.jpg" alt="Lente 1">
-            <img src="img/lente2.jpg" alt="Lente 2">
-          </div>
-        </li>
-
-        <li>
-          <button onclick="toggleSubmenu('perfume')">Perfume</button>
-          <div class="submenu" id="perfume">
-            <img src="img/perfume1.jpg" alt="Perfume 1">
-            <img src="img/perfume2.jpg" alt="Perfume 2">
-          </div>
-        </li>
-
-        <li>
-          <button onclick="toggleSubmenu('semi')">Semi-joias de Luxo</button>
-          <div class="submenu" id="semi">
-            <button onclick="toggleSubmenu('prata')">Prata</button>
-            <div class="submenu" id="prata">
-              <img src="img/prata1.jpg" alt="Prata 1">
-              <img src="img/prata2.jpg" alt="Prata 2">
-            </div>
-
-            <button onclick="toggleSubmenu('aliancas')">Aliança</button>
-            <div class="submenu" id="aliancas">
-              <button onclick="toggleSubmenu('compromisso')">Compromisso</button>
-              <div class="submenu" id="compromisso">
-                <img src="img/comp1.jpg" alt="Compromisso 1">
-                <img src="img/comp2.jpg" alt="Compromisso 2">
-              </div>
-
-              <button onclick="toggleSubmenu('noivado')">Noivado</button>
-              <div class="submenu" id="noivado">
-                <img src="img/noivado1.jpg" alt="Noivado 1">
-                <img src="img/noivado2.jpg" alt="Noivado 2">
-              </div>
-
-              <button onclick="toggleSubmenu('casamento')">Casamento</button>
-              <div class="submenu" id="casamento">
-                <img src="img/casamento1.jpg" alt="Casamento 1">
-                <img src="img/casamento2.jpg" alt="Casamento 2">
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <button onclick="toggleSubmenu('canetas')">Canetas</button>
-          <div class="submenu" id="canetas">
-            <img src="img/caneta1.jpg" alt="Caneta 1">
-            <img src="img/caneta2.jpg" alt="Caneta 2">
-          </div>
-        </li>
-
-        <li>
-          <button onclick="toggleSubmenu('servicos')">Serviços</button>
-          <div class="submenu" id="servicos">
-            <img src="img/servico1.jpg" alt="Serviço 1">
-            <img src="img/servico2.jpg" alt="Serviço 2">
-            <img src="img/servico3.jpg" alt="Serviço 3">
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <p class="catalogo-texto">
-      <a href="#contato">Clique aqui e solicite seu catálogo.</a>
-    </p>
-  </section>
-
-  <!-- Galeria -->
-  <section id="galeria">
-    <h2>Galeria</h2>
-    <p>Confira alguns dos nossos trabalhos e ambientes exclusivos.</p>
-  </section>
-
-  <!-- Contato -->
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>Entre em contato para mais informações e solicitações personalizadas.</p>
-  </section>
+  <nav class="menu-navegacao" aria-label="Menu principal">
+    <a href="#oculos">Óculos</a>
+    <a href="#historia">Quem Somos</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#contato">Contato</a>
+  </nav>
   
-  <!-- Script -->
-  <script>
-  function toggleProdutos() {
-  const lista = document.getElementById("lista-produtos");
-  lista.style.display = lista.style.display === "block" ? "none" : "block";
-}
+  <button id="btnAcessibilidade" aria-label="Abrir menu de acessibilidade" title="Acessibilidade">
+    <img src="img/icons8-disabled-access-26.png" alt="Acessibilidade">
+  </button>
 
-function toggleSubmenu(id) {
-  const submenu = document.getElementById(id);
-  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-}
-  </script>
+  <div id="painelAcessibilidade" aria-hidden="true">
+    <button onclick="aumentarFonte()">Aumentar Fonte</button>
+    <button onclick="diminuirFonte()">Diminuir Fonte</button>
+    <button onclick="modoContraste()">Alto Contraste</button>
+    <button onclick="resetarAcessibilidade()">Resetar</button>
+  </div>
+</header>
+
+<main>
+
+<section id="oculos">
+  <h2>Modelos em Destaque</h2>
+  
+  <div class="abas-galeria">
+    <button class="aba ativa" data-categoria="oculos-cat">Óculos</button>
+    <button class="aba" data-categoria="acessorios-cat">Acessórios</button>
+    <button class="aba" data-categoria="relogios-cat">Relógios</button>
+    <button class="aba" data-categoria="celulares-cat">Celulares</button>
+    <button class="aba" data-categoria="lentes-cat">Lentes de Contato</button>
+    <button class="aba" data-categoria="perfumes-cat">Perfumes</button>
+  </div>
+
+  <div class="conteudo-galeria">
+    <div class="categoria ativa" id="oculos-cat">
+      <img src="img/OCL3.jpeg" alt="Óculos de grau modelo clássico" class="clicavel">
+      <img src="img/OCL2.jpg" alt="Óculos de sol preto elegante" class="clicavel">
+    </div>
+
+    <div class="categoria" id="acessorios-cat">
+      <img src="img/acessorio1.jpg" alt="Estojo de óculos elegante" class="clicavel">
+      <img src="img/acessorio2.jpg" alt="Lenço de limpeza de lentes" class="clicavel">
+    </div>
+
+    <div class="categoria" id="relogios-cat">
+      <img src="img/relogio1.jpg" alt="Relógio masculino sofisticado" class="clicavel">
+      <img src="img/relogio2.jpg" alt="Relógio feminino elegante" class="clicavel">
+    </div>
+
+    <div class="categoria" id="celulares-cat">
+      <img src="img/celular1.jpg" alt="Smartphone moderno com design premium" class="clicavel">
+      <img src="img/celular2.jpg" alt="Celular elegante com acabamento metálico" class="clicavel">
+    </div>
+
+    <div class="categoria" id="lentes-cat">
+      <img src="img/lente1.jpg" alt="Lentes de contato coloridas" class="clicavel">
+      <img src="img/lente2.jpg" alt="Lentes de contato transparentes" class="clicavel">
+    </div>
+
+    <div class="categoria" id="perfumes-cat">
+      <img src="img/perfume1.jpg" alt="Perfume sofisticado feminino" class="clicavel">
+      <img src="img/perfume2.jpg" alt="Perfume masculino elegante" class="clicavel">
+    </div>
+  </div>
+</section>
+
+<section id="historia">
+  <h2>Quem Somos</h2>
+  <div class="bloco-historia">
+    <p>
+      Somos uma empresa do ramo óptico e relojoeiro, dedicada à excelência no atendimento personalizado e humanizado, oferecendo aos nossos clientes produtos de altíssima qualidade e beleza, em um ambiente extremamente agradável e aconchegante. Acreditamos que nossos clientes merecem o melhor — com transparência e confiança — pois são parte fundamental da nossa história.
+    </p>
+  </div>
+  <div class="bloco-historia">
+    <h3>Missão</h3>
+    <p>Exercer com excelência o atendimento personalizado e humanizado, com produtos de altíssima qualidade e beleza em um ambiente extremamente agradável e acolhedor.</p>
+  </div>
+  <div class="bloco-historia">
+    <h3>Visão</h3>
+    <p>Ser procurados e reconhecidos por cumprir nossa missão e valores em Rolândia e toda a região.</p>
+  </div>
+  <div class="bloco-historia">
+    <h3>Valores</h3>
+    <ul>
+      <li><strong>Transparência:</strong> transmitir informações completas, objetivas e confiáveis.</li>
+      <li><strong>Confiança:</strong> oferecer segurança e convicção sobre nosso ramo de atuação.</li>
+      <li><strong>Humanização:</strong> tratar os clientes com atenção, respeito e empatia.</li>
+      <li><strong>Qualidade:</strong> superar expectativas de desempenho e performance.</li>
+    </ul>
+  </div>
+  <div class="bloco-historia">
+    <h3>Nosso Propósito</h3>
+    <p>Proporcionar qualidade de visão para nossos clientes.</p>
+  </div>
+</section>
+
+<section id="galeria">
+  <h2>Ambiente Sofisticado</h2>
+  <div class="fotos">
+    <img src="img/2023-09-21 (2).webp" alt="Interior da ótica com ambiente sofisticado" class="clicavel">
+    <img src="img/expo.jpeg" alt="Expositor de óculos modernos" class="clicavel">
+  </div>
+</section>
+
+<section id="contato">
+  <h2>Fale Conosco</h2>
+  <div class="redes-contato">
+    <a href="https://api.whatsapp.com/send?phone=5543996807114" target="_blank" aria-label="Conversar pelo WhatsApp" class="btn-social">
+      <img src="img/whatsapp.png" alt="WhatsApp"> WhatsApp
+    </a>
+    <a href="https://www.instagram.com/vivace.rolandia/" target="_blank" aria-label="Visitar nosso Instagram" class="btn-social">
+      <img src="img/instagram.png" alt="Instagram"> Instagram
+    </a>
+  </div>
+</section>
+</main>
+
+<button id="voltarTopo" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
+
+<footer class="rodape">
+  <p>Copyright 2025 ©️ Allegro Vivace. Todos os Direitos Reservados.</p>
+</footer>
+
+<script>
+  // Voltar ao topo
+  const btnTopo = document.getElementById("voltarTopo");
+  window.addEventListener("scroll", () => {
+    btnTopo.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+  btnTopo.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // Acessibilidade
+  const btnAcessibilidade = document.getElementById("btnAcessibilidade");
+  const painel = document.getElementById("painelAcessibilidade");
+  let fonteAtual = 100;
+  let contrasteAtivo = false;
+
+  btnAcessibilidade.addEventListener("click", () => {
+    painel.style.display = painel.style.display === "block" ? "none" : "block";
+    painel.setAttribute("aria-hidden", painel.style.display !== "block");
+  });
+
+  function aumentarFonte() {
+    fonteAtual += 10;
+    document.body.style.fontSize = fonteAtual + "%";
+  }
+
+  function diminuirFonte() {
+    if (fonteAtual > 50) {
+      fonteAtual -= 10;
+      document.body.style.fontSize = fonteAtual + "%";
+    }
+  }
+
+  function modoContraste() {
+    contrasteAtivo = !contrasteAtivo;
+    document.body.style.backgroundColor = contrasteAtivo ? "#000" : "#fff";
+    document.body.style.color = contrasteAtivo ? "#fff" : "#111";
+    document.querySelectorAll("a").forEach(link => link.style.color = contrasteAtivo ? "#ffff00" : "");
+  }
+
+  function resetarAcessibilidade() {
+    fonteAtual = 100;
+    contrasteAtivo = false;
+    document.body.style.fontSize = "100%";
+    document.body.style.backgroundColor = "#fff";
+    document.body.style.color = "#111";
+    painel.style.display = "none";
+    document.querySelectorAll("a").forEach(link => link.style.color = "");
+  }
+
+  // Alternar abas da galeria
+  const abas = document.querySelectorAll(".abas-galeria .aba");
+  const categorias = document.querySelectorAll(".conteudo-galeria .categoria");
+
+  abas.forEach(aba => {
+    aba.addEventListener("click", () => {
+      abas.forEach(a => a.classList.remove("ativa"));
+      categorias.forEach(c => c.classList.remove("ativa"));
+
+      aba.classList.add("ativa");
+      const cat = document.getElementById(aba.dataset.categoria);
+      cat.classList.add("ativa");
+    });
+  });
+</script>
+
 </body>
 </html>
