@@ -5,15 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Allegro Vivace</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="font-normal">
-
-  <!-- Cabeçalho -->
+<body>
+  <!-- Logo -->
   <header>
-    <h1>
-      <span class="allegro">Allegro</span> <span class="vivace">Vivace</span>
-    </h1>
+    <h1><span class="allegro">ALLEGRO</span><br><span class="vivace">VIVACE</span></h1>
     <nav>
       <ul>
         <li><a href="#quem-somos">Quem Somos</a></li>
@@ -28,165 +25,178 @@
   <!-- Quem Somos -->
   <section id="quem-somos">
     <h2>Quem Somos</h2>
-    <p>Uma ótica e relojoaria de alto padrão, com foco em sofisticação, elegância e excelência.</p>
+    <p>A Allegro Vivace nasceu com a missão de unir sofisticação e exclusividade em cada detalhe. 
+       Nosso propósito é oferecer mais do que produtos: criamos experiências únicas para clientes que 
+       buscam qualidade e requinte.</p>
   </section>
 
   <!-- Missão -->
   <section id="missao">
     <h2>Missão</h2>
-    <p>Oferecer produtos de luxo e serviços de qualidade, alinhados ao estilo de vida sofisticado dos nossos clientes.</p>
+    <p>Nosso compromisso é proporcionar excelência, combinando design, inovação e tradição 
+       em cada peça que oferecemos.</p>
+  </section>
+
+  <!-- Destaques -->
+  <section id="destaques">
+    <h2>Modelos em Destaque</h2>
+    <div class="grid">
+      <img src="img/destaque1.jpg" alt="Destaque 1">
+      <img src="img/destaque2.jpg" alt="Destaque 2">
+      <img src="img/destaque3.jpg" alt="Destaque 3">
+      <img src="img/destaque4.jpg" alt="Destaque 4">
+      <img src="img/destaque5.jpg" alt="Destaque 5">
+      <img src="img/destaque6.jpg" alt="Destaque 6">
+      <img src="img/destaque7.jpg" alt="Destaque 7">
+      <img src="img/destaque8.jpg" alt="Destaque 8">
+    </div>
+  </section>
+
+  <!-- Ambiente Sofisticado -->
+  <section id="ambiente">
+    <h2>Ambiente Sofisticado</h2>
+    <div class="grid">
+      <img src="img/amb1.jpg" alt="Ambiente 1">
+      <img src="img/amb2.jpg" alt="Ambiente 2">
+      <img src="img/amb3.jpg" alt="Ambiente 3">
+      <img src="img/amb4.jpg" alt="Ambiente 4">
+    </div>
   </section>
 
   <!-- Produtos -->
   <section id="produtos">
     <h2>Produtos</h2>
-    <div class="categorias">
-      <details>
-        <summary>Acessórios</summary>
-        <div class="galeria-produtos">
-          <img src="img/acessorio1.jpg" alt="Acessório">
-          <img src="img/acessorio2.jpg" alt="Acessório">
-        </div>
-      </details>
-
-      <details>
-        <summary>Armações</summary>
-        <div class="galeria-produtos">
-          <img src="img/armacao1.jpg" alt="Armação">
-        </div>
-      </details>
-
-      <details>
-        <summary>Solares</summary>
-        <div class="galeria-produtos">
-          <img src="img/solar1.jpg" alt="Óculos Solar">
-        </div>
-      </details>
-
-      <details>
-        <summary>Relógios</summary>
-        <div class="galeria-produtos">
-          <img src="img/relogio1.jpg" alt="Relógio">
-        </div>
-      </details>
-
-      <details>
-        <summary>Lentes de Contato</summary>
-        <div class="galeria-produtos">
-          <img src="img/lente1.jpg" alt="Lente">
-        </div>
-      </details>
-
-      <details>
-        <summary>Perfume</summary>
-        <div class="galeria-produtos">
-          <img src="img/perfume1.jpg" alt="Perfume">
-        </div>
-      </details>
-
-      <details>
-        <summary>Semi-jóias de Luxo</summary>
-        <details>
-          <summary>Prata</summary>
-          <div class="galeria-produtos">
-            <img src="img/prata1.jpg" alt="Prata">
+    <button class="toggle-produtos" onclick="toggleProdutos()">Ver Produtos</button>
+    
+    <div class="produtos-lista" id="lista-produtos">
+      <ul>
+        <li>
+          <button onclick="toggleSubmenu('acessorios')">Acessórios</button>
+          <div class="submenu" id="acessorios">
+            <img src="img/acessorio1.jpg" alt="Acessório 1">
+            <img src="img/acessorio2.jpg" alt="Acessório 2">
           </div>
-        </details>
-        <details>
-          <summary>Alianças</summary>
-          <details>
-            <summary>Compromisso</summary>
-            <div class="galeria-produtos">
-              <img src="img/alianca1.jpg" alt="Aliança Compromisso">
-            </div>
-          </details>
-          <details>
-            <summary>Noivado</summary>
-            <div class="galeria-produtos">
-              <img src="img/noivado1.jpg" alt="Aliança Noivado">
-            </div>
-          </details>
-          <details>
-            <summary>Casamento</summary>
-            <div class="galeria-produtos">
-              <img src="img/casamento1.jpg" alt="Aliança Casamento">
-            </div>
-          </details>
-        </details>
-      </details>
+        </li>
 
-      <details>
-        <summary>Canetas</summary>
-        <div class="galeria-produtos">
-          <img src="img/caneta1.jpg" alt="Caneta">
-        </div>
-      </details>
+        <li>
+          <button onclick="toggleSubmenu('armacoes')">Armações</button>
+          <div class="submenu" id="armacoes">
+            <img src="img/armacao1.jpg" alt="Armação 1">
+            <img src="img/armacao2.jpg" alt="Armação 2">
+          </div>
+        </li>
 
-      <details>
-        <summary>Serviços</summary>
-        <div class="galeria-produtos">
-          <img src="img/servico1.jpg" alt="Serviço">
-          <img src="img/servico2.jpg" alt="Serviço">
-          <img src="img/servico3.jpg" alt="Serviço">
-        </div>
-      </details>
+        <li>
+          <button onclick="toggleSubmenu('solares')">Solares</button>
+          <div class="submenu" id="solares">
+            <img src="img/solar1.jpg" alt="Solar 1">
+            <img src="img/solar2.jpg" alt="Solar 2">
+          </div>
+        </li>
+
+        <li>
+          <button onclick="toggleSubmenu('relogios')">Relógio</button>
+          <div class="submenu" id="relogios">
+            <img src="img/relogio1.jpg" alt="Relógio 1">
+            <img src="img/relogio2.jpg" alt="Relógio 2">
+          </div>
+        </li>
+
+        <li>
+          <button onclick="toggleSubmenu('lentes')">Lentes de Contato</button>
+          <div class="submenu" id="lentes">
+            <img src="img/lente1.jpg" alt="Lente 1">
+            <img src="img/lente2.jpg" alt="Lente 2">
+          </div>
+        </li>
+
+        <li>
+          <button onclick="toggleSubmenu('perfume')">Perfume</button>
+          <div class="submenu" id="perfume">
+            <img src="img/perfume1.jpg" alt="Perfume 1">
+            <img src="img/perfume2.jpg" alt="Perfume 2">
+          </div>
+        </li>
+
+        <li>
+          <button onclick="toggleSubmenu('semi')">Semi-joias de Luxo</button>
+          <div class="submenu" id="semi">
+            <button onclick="toggleSubmenu('prata')">Prata</button>
+            <div class="submenu" id="prata">
+              <img src="img/prata1.jpg" alt="Prata 1">
+              <img src="img/prata2.jpg" alt="Prata 2">
+            </div>
+
+            <button onclick="toggleSubmenu('aliancas')">Aliança</button>
+            <div class="submenu" id="aliancas">
+              <button onclick="toggleSubmenu('compromisso')">Compromisso</button>
+              <div class="submenu" id="compromisso">
+                <img src="img/comp1.jpg" alt="Compromisso 1">
+                <img src="img/comp2.jpg" alt="Compromisso 2">
+              </div>
+
+              <button onclick="toggleSubmenu('noivado')">Noivado</button>
+              <div class="submenu" id="noivado">
+                <img src="img/noivado1.jpg" alt="Noivado 1">
+                <img src="img/noivado2.jpg" alt="Noivado 2">
+              </div>
+
+              <button onclick="toggleSubmenu('casamento')">Casamento</button>
+              <div class="submenu" id="casamento">
+                <img src="img/casamento1.jpg" alt="Casamento 1">
+                <img src="img/casamento2.jpg" alt="Casamento 2">
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <button onclick="toggleSubmenu('canetas')">Canetas</button>
+          <div class="submenu" id="canetas">
+            <img src="img/caneta1.jpg" alt="Caneta 1">
+            <img src="img/caneta2.jpg" alt="Caneta 2">
+          </div>
+        </li>
+
+        <li>
+          <button onclick="toggleSubmenu('servicos')">Serviços</button>
+          <div class="submenu" id="servicos">
+            <img src="img/servico1.jpg" alt="Serviço 1">
+            <img src="img/servico2.jpg" alt="Serviço 2">
+            <img src="img/servico3.jpg" alt="Serviço 3">
+          </div>
+        </li>
+      </ul>
     </div>
+
+    <p class="catalogo-texto">
+      <a href="#contato">Clique aqui e solicite seu catálogo.</a>
+    </p>
   </section>
 
   <!-- Galeria -->
   <section id="galeria">
     <h2>Galeria</h2>
-    <div class="galeria">
-      <img src="img/modelo1.jpg" alt="Modelo">
-      <img src="img/modelo2.jpg" alt="Modelo">
-      <img src="img/modelo3.jpg" alt="Modelo">
-      <img src="img/modelo4.jpg" alt="Modelo">
-      <img src="img/modelo5.jpg" alt="Modelo">
-      <img src="img/modelo6.jpg" alt="Modelo">
-      <img src="img/modelo7.jpg" alt="Modelo">
-      <img src="img/modelo8.jpg" alt="Modelo">
-    </div>
+    <p>Confira alguns dos nossos trabalhos e ambientes exclusivos.</p>
   </section>
 
   <!-- Contato -->
   <section id="contato">
     <h2>Contato</h2>
-    <p>Email: contato@allegrovivace.com</p>
-    <p>Telefone: (11) 99999-9999</p>
+    <p>Entre em contato para mais informações e solicitações personalizadas.</p>
   </section>
-
-  <!-- Rodapé -->
-  <footer>
-    <p>© 2025 Allegro Vivace. Todos os direitos reservados.</p>
-  </footer>
-
-  <!-- Botão Acessibilidade -->
-  <button id="btnAcessibilidade">♿</button>
-
-  <!-- Painel -->
-  <div id="painelAcessibilidade">
-    <button onclick="toggleContraste()">Alto Contraste</button>
-    <button onclick="toggleFonte()">Trocar Fonte</button>
-  </div>
-
+  
   <!-- Script -->
   <script>
-    const btnAcessibilidade = document.getElementById("btnAcessibilidade");
-    const painel = document.getElementById("painelAcessibilidade");
-    let contrasteAtivo = false;
+  function toggleProdutos() {
+  const lista = document.getElementById("lista-produtos");
+  lista.style.display = lista.style.display === "block" ? "none" : "block";
+}
 
-    btnAcessibilidade.addEventListener("click", () => {
-      painel.style.display = painel.style.display === "flex" ? "none" : "flex";
-    });
-
-    function toggleFonte() {
-      document.body.classList.toggle("font-allegro");
-    }
-
-    function toggleContraste() {
-      contrasteAtivo = !contrasteAtivo;
-      document.body.classList.toggle("contraste-ativo", contrasteAtivo);
-    }
+function toggleSubmenu(id) {
+  const submenu = document.getElementById(id);
+  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+}
   </script>
 </body>
 </html>
