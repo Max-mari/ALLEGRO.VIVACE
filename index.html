@@ -100,5 +100,19 @@
   <footer>
     <p>© 2025 Alegro Vivace. Todos os direitos reservados.</p>
   </footer>
+  
+  // Abrir e fechar categorias de produtos
+document.querySelectorAll(".produto").forEach(botao => {
+  botao.addEventListener("click", () => {
+    const targetId = botao.getAttribute("data-target");
+    const targetDiv = document.getElementById(targetId);
+
+    if (targetDiv.style.display === "block") {
+      targetDiv.style.display = "none";
+    } else {
+      targetDiv.style.display = "block";
+    }
+  });
+});
 </body>
 </html>
