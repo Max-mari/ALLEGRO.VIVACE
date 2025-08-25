@@ -1,160 +1,173 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alegro Vivace</title>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alegro Vivace</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- HEADER -->
+  <header>
+    <h1><span class="logo-manuscrita">ALEGRO</span> VIVACE WATCH GARLOGERIA</h1>
+    <nav>
+      <ul>
+        <li><a href="#missao">Missão</a></li>
+        <li><a href="#quem-somos">Quem Somos</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<!-- HEADER -->
-<header>
-  <h1><span class="logo-manuscrita">ALEGRO</span> VIVACE WATCH GARLOGERIA</h1>
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <nav id="menu">
-    <ul>
-      <li><a href="#missao">Missão</a></li>
-      <li><a href="#quem-somos">Quem Somos</a></li>
-      <li><a href="#produtos">Produtos</a></li>
-      <li><a href="#galeria">Galeria</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- GALERIA ÓCULOS -->
+  <section id="galeria">
+    <h2>Galeria</h2>
+    <div class="grid-imagens">
+      <img src="oculos1.jpg" alt="Óculos 1">
+      <img src="oculos2.jpg" alt="Óculos 2">
+      <img src="oculos3.jpg" alt="Óculos 3">
+      <img src="oculos4.jpg" alt="Óculos 4">
+      <img src="oculos5.jpg" alt="Óculos 5">
+      <img src="oculos6.jpg" alt="Óculos 6">
+      <img src="oculos7.jpg" alt="Óculos 7">
+      <img src="oculos8.jpg" alt="Óculos 8">
+    </div>
+  </section>
 
-<!-- GALERIA TOPO (8 IMAGENS) -->
-<section id="topo-fotos">
-  <div class="grid-topo-fotos">
-    <img src="img1.jpg" alt="">
-    <img src="img2.jpg" alt="">
-    <img src="img3.jpg" alt="">
-    <img src="img4.jpg" alt="">
-    <img src="img5.jpg" alt="">
-    <img src="img6.jpg" alt="">
-    <img src="img7.jpg" alt="">
-    <img src="img8.jpg" alt="">
-  </div>
-</section>
+  <!-- MISSÃO / QUEM SOMOS -->
+  <section id="missao">
+    <h2>Missão</h2>
+    <p>Trazer elegância, qualidade e estilo para cada cliente que confia em nosso trabalho.</p>
+  </section>
 
-<!-- PRODUTOS -->
+  <section id="quem-somos">
+    <h2>Quem Somos</h2>
+    <p>Somos especialistas em oferecer produtos de alto padrão, prezando pela sofisticação e atendimento exclusivo.</p>
+  </section>
+
+  <<!-- PRODUTOS -->
 <section id="produtos">
   <h2>Produtos</h2>
   <div class="produtos-grid">
 
-    <button class="produto" data-target="acessorios">Acessórios</button>
-    <div id="acessorios" class="imagens-produto">
-      <img src="acessorio1.jpg" alt="">
-      <img src="acessorio2.jpg" alt="">
-    </div>
+    <button class="produto">
+      <div class="imagens-produto">
+        <img src="acessorio1.jpg" alt="Acessório 1">
+        <img src="acessorio2.jpg" alt="Acessório 2">
+      </div>
+      <span>Acessórios</span>
+    </button>
 
-    <button class="produto" data-target="armacoes">Armações</button>
-    <div id="armacoes" class="imagens-produto">
-      <img src="armacao1.jpg" alt="">
-      <img src="armacao2.jpg" alt="">
-    </div>
+    <button class="produto">
+      <div class="imagens-produto">
+        <img src="armacao1.jpg" alt="Armação 1">
+        <img src="armacao2.jpg" alt="Armação 2">
+      </div>
+      <span>Armações</span>
+    </button>
 
-    <button class="produto" data-target="solares">Solares</button>
-    <div id="solares" class="imagens-produto">
-      <img src="solar1.jpg" alt="">
-      <img src="solar2.jpg" alt="">
-    </div>
+    <button class="produto">
+      <div class="imagens-produto">
+        <img src="solar1.jpg" alt="Solar 1">
+        <img src="solar2.jpg" alt="Solar 2">
+      </div>
+      <span>Solares</span>
+    </button>
 
-    <button class="produto" data-target="relogios">Relógios</button>
-    <div id="relogios" class="imagens-produto">
-      <img src="relogio1.jpg" alt="">
-      <img src="relogio2.jpg" alt="">
-    </div>
+    <button class="produto">
+      <div class="imagens-produto">
+        <img src="relogio1.jpg" alt="Relógio 1">
+        <img src="relogio2.jpg" alt="Relógio 2">
+      </div>
+      <span>Relógio</span>
+    </button>
 
-    <button class="produto" data-target="lentes">Lentes de Contato</button>
-    <div id="lentes" class="imagens-produto">
-      <img src="lente1.jpg" alt="">
-      <img src="lente2.jpg" alt="">
-    </div>
+    <button class="produto">
+      <div class="imagens-produto">
+        <img src="lente1.jpg" alt="Lente de Contato 1">
+        <img src="lente2.jpg" alt="Lente de Contato 2">
+      </div>
+      <span>Lente de Contato</span>
+    </button>
 
-    <button class="produto" data-target="perfumes">Perfumes</button>
-    <div id="perfumes" class="imagens-produto">
-      <img src="perfume1.jpg" alt="">
-      <img src="perfume2.jpg" alt="">
-    </div>
+    <button class="produto">
+      <div class="imagens-produto">
+        <img src="perfume1.jpg" alt="Perfume 1">
+        <img src="perfume2.jpg" alt="Perfume 2">
+      </div>
+      <span>Perfume</span>
+    </button>
 
-    <button class="produto" data-target="semijoias">Semijóias de Luxo</button>
-    <div id="semijoias" class="imagens-produto">
-      <img src="semijoia1.jpg" alt="">
-      <img src="semijoia2.jpg" alt="">
-    </div>
+    <button class="produto">
+      <div class="imagens-produto">
+        <img src="semijoia1.jpg" alt="Semijóia 1">
+        <img src="semijoia2.jpg" alt="Semijóia 2">
+      </div>
+      <span>Semijóis de luxo</span>
+    </button>
 
-    <button class="produto" data-target="prata">Prata</button>
-    <div id="prata" class="imagens-produto">
-      <img src="prata1.jpg" alt="">
-      <img src="prata2.jpg" alt="">
-    </div>
+    <button class="produto">
+      <div class="imagens-produto">
+        <img src="prata1.jpg" alt="Prata 1">
+        <img src="prata2.jpg" alt="Prata 2">
+      </div>
+      <span>Prata</span>
+    </button>
 
-    <button class="produto" data-target="aliancas">Alianças</button>
-    <div id="aliancas" class="imagens-produto">
-      <img src="alianca1.jpg" alt="">
-      <img src="alianca2.jpg" alt="">
-    </div>
+    <button class="produto">
+      <div class="imagens-produto">
+        <img src="alianca1.jpg" alt="Aliança 1">
+        <img src="alianca2.jpg" alt="Aliança 2">
+      </div>
+      <span>Aliança</span>
+    </button>
 
-    <button class="produto" data-target="canetas">Canetas</button>
-    <div id="canetas" class="imagens-produto">
-      <img src="caneta1.jpg" alt="">
-      <img src="caneta2.jpg" alt="">
-    </div>
+    <button class="produto">
+      <div class="imagens-produto">
+        <img src="caneta1.jpg" alt="Caneta 1">
+        <img src="caneta2.jpg" alt="Caneta 2">
+      </div>
+      <span>Caneta</span>
+    </button>
 
-    <button class="produto" data-target="servicos">Serviços</button>
-    <div id="servicos" class="imagens-produto">
-      <img src="servico1.jpg" alt="">
-      <img src="servico2.jpg" alt="">
-      <img src="servico3.jpg" alt="">
-    </div>
+    <button class="produto">
+      <div class="imagens-produto">
+        <img src="servico1.jpg" alt="Serviço 1">
+        <img src="servico2.jpg" alt="Serviço 2">
+      </div>
+      <span>Serviço</span>
+    </button>
 
   </div>
 </section>
 
-<!-- BOTÃO CATÁLOGO -->
-<section id="catalogo">
-  <a href="https://wa.me/5511999999999" class="btn-catalogo">Clique aqui e solicite seu Catálogo</a>
-</section>
+  <!-- CATÁLOGO -->
+  <section id="catalogo">
+    <a href="https://wa.me/5511999999999" class="btn-catalogo">Clique aqui e solicite seu Catálogo</a>
+  </section>
 
-<!-- CONTATO -->
-<section id="contato">
-  <h2>Contato</h2>
-  <div class="redes-contato">
-    <a href="https://www.instagram.com/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
-    <a href="https://wa.me/5511999999999" target="_blank"><img src="whatsapp.png" alt="WhatsApp"></a>
-  </div>
-</section>
+  <!-- AMBIENTE -->
+  <section id="ambiente">
+    <h2>Ambiente</h2>
+    <div class="grid-imagens">
+      <img src="ambiente1.jpg" alt="Ambiente 1">
+      <img src="ambiente2.jpg" alt="Ambiente 2">
+      <img src="ambiente3.jpg" alt="Ambiente 3">
+      <img src="ambiente4.jpg" alt="Ambiente 4">
+    </div>
+  </section>
 
-<footer>
-  <p>© 2025 Alegro Vivace. Todos os direitos reservados.</p>
-</footer>
+  <!-- CONTATO -->
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Telefone: (11) 99999-9999</p>
+  </section>
 
-<!-- JAVASCRIPT -->
-<script>
-// Abrir/fechar categorias de produtos
-document.querySelectorAll(".produto").forEach(botao => {
-  botao.addEventListener("click", () => {
-    const targetId = botao.getAttribute("data-target");
-    const targetDiv = document.getElementById(targetId);
-    targetDiv.style.display = (targetDiv.style.display === "block") ? "none" : "block";
-  });
-});
-
-// Menu hambúrguer mobile
-const hamburger = document.getElementById("hamburger");
-const menu = document.getElementById("menu");
-hamburger.addEventListener("click", () => {
-  const ul = menu.querySelector("ul");
-  if(ul.style.display === "flex") { ul.style.display = "none"; }
-  else { ul.style.display = "flex"; ul.style.flexDirection = "column"; }
-});
-</script>
-
+  <footer>
+    <p>© 2025 Alegro Vivace Watch Garlogeria. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
