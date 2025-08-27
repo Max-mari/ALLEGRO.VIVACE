@@ -4,31 +4,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alegro Vivace</title>
+  <title>Allegro Vivace</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <div class="topo">
-    <h1>
-      <span class="allegro">ALLEGRO</span><br>
-      <span class="vivace">VIVACE</span>
-    </h1>
-    <p class="subtitulo">Ótica e Relojoaria</p>
-  </div>
 
-  <nav>
-    <div class="menu-toggle" id="menu-toggle">
-      &#9776; <!-- ícone hambúrguer -->
+  <!-- HEADER -->
+  <header class="topo">
+    <div class="logo">
+      <img src="img/945x945 logo dourado cor do allegra sem as bolinhas PNG (1).png" alt="Allegro Vivace" class="logo-img"> <!-- PNG transparente -->
     </div>
-    <ul id="menu">
-      <li><a href="#missao">Missão</a></li>
-      <li><a href="#quem-somos">Quem Somos</a></li>
-      <li><a href="#produtos">Produtos</a></li>
-      <li><a href="#galeria">Galeria</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
+    <div class="menu-toggle" id="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav" id="nav-menu">
+      <ul>
+        <li><a href="#missao">Missao</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <!-- Botões de produtos na ordem desejada -->
+      <div class="produto-buttons">
+        <button class="produto-btn" data-img="acessorio1.jpg,acessorio2.jpg">Acessório</button>
+        <button class="produto-btn" data-img="armacao1.jpg,armacao2.jpg">Armação</button>
+        <button class="produto-btn" data-img="solar1.jpg,solar2.jpg">Solar</button>
+        <button class="produto-btn" data-img="relogio1.jpg,relogio2.jpg">Relógio</button>
+        <button class="produto-btn" data-img="lente1.jpg,lente2.jpg">Lente</button>
+        <button class="produto-btn" data-img="perfume1.jpg,perfume2.jpg">Perfume</button>
+        <button class="produto-btn" data-img="semijoia1.jpg,semijoia2.jpg">Semi-joia</button>
+        <button class="produto-btn" data-img="prata1.jpg,prata2.jpg">Prata</button>
+        <button class="produto-btn" data-img="alianca1.jpg,alianca2.jpg">Aliança</button>
+        <button class="produto-btn" data-img="caneta1.jpg,caneta2.jpg">Caneta</button>
+        <button class="produto-btn" data-img="servico1.jpg,servico2.jpg,servico3.jpg">Serviço</button>
+      </div>
+    </nav>
 </header>
 
   <!-- GALERIA ÓCULOS -->
@@ -172,8 +185,8 @@
   <!-- CONTATO -->
   <section id="contato">
     <h2>Contato</h2>
-    <a href="https://wa.me/SEU_NUMERO" target="_blank">WhatsApp</a> |
-    <a href="https://www.instagram.com/SEU_PERFIL" target="_blank">Instagram</a>
+    <a href="https://wa.me/SEU_NUMERO" target="_blank"> <img src="img/whatsapp.png"></a> |
+    <a href="https://www.instagram.com/vivace.rolandia/reels/" target="_blank"><img src="img/instagram.png"></a>
   </section>
 
   <footer>
@@ -182,12 +195,29 @@
 
   <script src="script.js">
     
-    const toggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
+    // Menu hambúrguer
+const menuToggle = document.getElementById('mobile-menu');
+const navMenu = document.getElementById('nav-menu');
 
-toggle.addEventListener('click', () => {
-  menu.classList.toggle('ativo');
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
 });
+
+// Botões de produtos
+const produtos = document.querySelectorAll('.produto-btn');
+const imagemPrincipal = document.getElementById('imagem-principal');
+
+produtos.forEach(botao => {
+    botao.addEventListener('click', () => {
+        const imgs = botao.getAttribute('data-img').split(','); // múltiplas imagens
+        if (imagemPrincipal) {
+            imagemPrincipal.src = imgs[0]; // mostra a primeira imagem
+            // Aqui você pode adicionar lógica para mostrar todas as imagens na seção de produtos
+        }
+        document.getElementById('produtos')?.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
   </script>
 </body>
 </html>
