@@ -2,83 +2,74 @@
 
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Allegro Vivace</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- HEADER -->
   <header class="topo">
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <div class="logo">
-      <img src="img/945x945 logo dourado cor do allegra sem as bolinhas PNG (1).png" alt="Allegro Vivace" class="logo-img"> <!-- PNG transparente -->
+      <img class="logo-img" src="img/945x945 logo dourado cor do allegra sem as bolinhas PNG (1).png" alt="Allegro Vivace Logo" />
     </div>
-    <div class="menu-toggle" id="mobile-menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-   <header class="topo">
-    <!-- Menu hambúrguer no topo esquerdo -->
-    <div class="menu-toggle" id="mobile-menu">
-      <span>-</span>
-      <span>-</span>
-      <span>-</span>
-    </div>
-
-    <!-- Logo centralizado -->
-    <div class="logo">
-      <img src="img/945x945 logo dourado cor do allegra sem as bolinhas PNG (1).png" alt="Allegro Vivace" class="logo-img"> <!-- PNG transparente -->
-    </div>
-
-    <!-- Navegação (aparece ao clicar no menu) -->
-    <nav class="nav" id="nav-menu">
+    <nav class="menu" id="menu">
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#produtos">Produtos</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><button onclick="mostrarProduto('oculos')">Óculos</button></li>
+        <li><button onclick="mostrarProduto('relogio')">Relógios</button></li>
+        <li><button onclick="mostrarProduto('lente')">Lentes</button></li>
+        <li><button onclick="mostrarProduto('alianca')">Alianças</button></li>
       </ul>
-
-      <!-- Botões de produtos -->
-      <div class="produto-buttons">
-        <button class="produto-btn" data-img="acessorio1.jpg,acessorio2.jpg">Acessório</button>
-        <button class="produto-btn" data-img="armacao1.jpg,armacao2.jpg">Armação</button>
-        <button class="produto-btn" data-img="solar1.jpg,solar2.jpg">Solar</button>
-        <button class="produto-btn" data-img="relogio1.jpg,relogio2.jpg">Relógio</button>
-        <button class="produto-btn" data-img="lente1.jpg,lente2.jpg">Lente</button>
-        <button class="produto-btn" data-img="perfume1.jpg,perfume2.jpg">Perfume</button>
-        <button class="produto-btn" data-img="semijoia1.jpg,semijoia2.jpg">Semi-joia</button>
-        <button class="produto-btn" data-img="prata1.jpg,prata2.jpg">Prata</button>
-        <button class="produto-btn" data-img="alianca1.jpg,alianca2.jpg">Aliança</button>
-        <button class="produto-btn" data-img="caneta1.jpg,caneta2.jpg">Caneta</button>
-        <button class="produto-btn" data-img="servico1.jpg,servico2.jpg,servico3.jpg">Serviço</button>
-      </div>
     </nav>
-</header>
+  </header>
 
-  <!-- GALERIA ÓCULOS -->
+  <!-- PRODUTOS EXCLUSIVOS -->
+  <main>
+    <div id="produtos-exclusivos">
+      <div id="oculos" class="produto oculto">
+        <img src="oculos.jpg" alt="Óculos" />
+      </div>
+      <div id="relogio" class="produto oculto">
+        <img src="relogio.jpg" alt="Relógio" />
+      </div>
+      <div id="lente" class="produto oculto">
+        <img src="lente.jpg" alt="Lente de Contato" />
+      </div>
+      <div id="alianca" class="produto oculto">
+        <img src="alianca.jpg" alt="Aliança" />
+      </div>
+    </div>
+  </main>
+
+  <!-- GALERIA -->
   <section id="galeria">
     <h2>Galeria</h2>
     <div class="grid-imagens">
-      <img src="oculos1.jpg" alt="Óculos 1">
-      <img src="oculos2.jpg" alt="Óculos 2">
-      <img src="oculos3.jpg" alt="Óculos 3">
-      <img src="oculos4.jpg" alt="Óculos 4">
-      <img src="oculos5.jpg" alt="Óculos 5">
-      <img src="oculos6.jpg" alt="Óculos 6">
-      <img src="oculos7.jpg" alt="Óculos 7">
-      <img src="oculos8.jpg" alt="Óculos 8">
+      <img src="oculos1.jpg" alt="Óculos 1" />
+      <img src="oculos2.jpg" alt="Óculos 2" />
+      <img src="oculos3.jpg" alt="Óculos 3" />
+      <img src="oculos4.jpg" alt="Óculos 4" />
+      <img src="oculos5.jpg" alt="Óculos 5" />
+      <img src="oculos6.jpg" alt="Óculos 6" />
+      <img src="oculos7.jpg" alt="Óculos 7" />
+      <img src="oculos8.jpg" alt="Óculos 8" />
     </div>
   </section>
 
-  <!-- MISSÃO / QUEM SOMOS -->
+  <!-- MISSÃO -->
   <section id="missao">
     <h2>Missão</h2>
     <p>Trazer elegância, qualidade e estilo para cada cliente que confia em nosso trabalho.</p>
   </section>
 
+  <!-- QUEM SOMOS -->
   <section id="quem-somos">
     <h2>Quem Somos</h2>
     <p>Somos especialistas em oferecer produtos de alto padrão, prezando pela sofisticação e atendimento exclusivo.</p>
@@ -89,92 +80,94 @@
     <h2>Produtos</h2>
     <div class="produtos-grid">
 
+      <!-- Cada botão representa uma categoria -->
       <button class="produto">
         <div class="imagens-produto">
-          <img src="acessorio1.jpg" alt="Acessório 1">
-          <img src="acessorio2.jpg" alt="Acessório 2">
+          <img src="acessorio1.jpg" alt="Acessório 1" />
+          <img src="acessorio2.jpg" alt="Acessório 2" />
         </div>
         <span>Acessórios</span>
       </button>
 
+      <!-- Repita para os demais -->
       <button class="produto">
         <div class="imagens-produto">
-          <img src="armacao1.jpg" alt="Armação 1">
-          <img src="armacao2.jpg" alt="Armação 2">
+          <img src="armacao1.jpg" alt="Armação 1" />
+          <img src="armacao2.jpg" alt="Armação 2" />
         </div>
         <span>Armações</span>
       </button>
 
       <button class="produto">
         <div class="imagens-produto">
-          <img src="solar1.jpg" alt="Solar 1">
-          <img src="solar2.jpg" alt="Solar 2">
+          <img src="solar1.jpg" alt="Solar 1" />
+          <img src="solar2.jpg" alt="Solar 2" />
         </div>
         <span>Solares</span>
       </button>
 
       <button class="produto">
         <div class="imagens-produto">
-          <img src="relogio1.jpg" alt="Relógio 1">
-          <img src="relogio2.jpg" alt="Relógio 2">
+          <img src="relogio1.jpg" alt="Relógio 1" />
+          <img src="relogio2.jpg" alt="Relógio 2" />
         </div>
-        <span>Relógio</span>
+        <span>Relógios</span>
       </button>
 
       <button class="produto">
         <div class="imagens-produto">
-          <img src="lente1.jpg" alt="Lente de Contato 1">
-          <img src="lente2.jpg" alt="Lente de Contato 2">
+          <img src="lente1.jpg" alt="Lente de Contato 1" />
+          <img src="lente2.jpg" alt="Lente de Contato 2" />
         </div>
-        <span>Lente de Contato</span>
+        <span>Lentes</span>
       </button>
 
       <button class="produto">
         <div class="imagens-produto">
-          <img src="perfume1.jpg" alt="Perfume 1">
-          <img src="perfume2.jpg" alt="Perfume 2">
+          <img src="perfume1.jpg" alt="Perfume 1" />
+          <img src="perfume2.jpg" alt="Perfume 2" />
         </div>
-        <span>Perfume</span>
+        <span>Perfumes</span>
       </button>
 
       <button class="produto">
         <div class="imagens-produto">
-          <img src="semijoia1.jpg" alt="Semijóia 1">
-          <img src="semijoia2.jpg" alt="Semijóia 2">
+          <img src="semijoia1.jpg" alt="Semijóia 1" />
+          <img src="semijoia2.jpg" alt="Semijóia 2" />
         </div>
-        <span>Semijóis de luxo</span>
+        <span>Semijóias de Luxo</span>
       </button>
 
       <button class="produto">
         <div class="imagens-produto">
-          <img src="prata1.jpg" alt="Prata 1">
-          <img src="prata2.jpg" alt="Prata 2">
+          <img src="prata1.jpg" alt="Prata 1" />
+          <img src="prata2.jpg" alt="Prata 2" />
         </div>
         <span>Prata</span>
       </button>
 
       <button class="produto">
         <div class="imagens-produto">
-          <img src="alianca1.jpg" alt="Aliança 1">
-          <img src="alianca2.jpg" alt="Aliança 2">
+          <img src="alianca1.jpg" alt="Aliança 1" />
+          <img src="alianca2.jpg" alt="Aliança 2" />
         </div>
-        <span>Aliança</span>
+        <span>Alianças</span>
       </button>
 
       <button class="produto">
         <div class="imagens-produto">
-          <img src="caneta1.jpg" alt="Caneta 1">
-          <img src="caneta2.jpg" alt="Caneta 2">
+          <img src="caneta1.jpg" alt="Caneta 1" />
+          <img src="caneta2.jpg" alt="Caneta 2" />
         </div>
-        <span>Caneta</span>
+        <span>Canetas</span>
       </button>
 
       <button class="produto">
         <div class="imagens-produto">
-          <img src="servico1.jpg" alt="Serviço 1">
-          <img src="servico2.jpg" alt="Serviço 2">
+          <img src="servico1.jpg" alt="Serviço 1" />
+          <img src="servico2.jpg" alt="Serviço 2" />
         </div>
-        <span>Serviço</span>
+        <span>Serviços</span>
       </button>
 
     </div>
@@ -182,56 +175,34 @@
 
   <!-- CATÁLOGO -->
   <section id="catalogo">
-    <a href="https://wa.me/5511999999999" class="btn-catalogo">Clique aqui e solicite seu Catálogo</a>
+    <a href="https://wa.me/5511999999999" class="btn-catalogo" target="_blank">Clique aqui e solicite seu Catálogo</a>
   </section>
 
   <!-- AMBIENTE -->
   <section id="ambiente">
     <h2>Ambiente</h2>
     <div class="grid-imagens">
-      <img src="ambiente1.jpg" alt="Ambiente 1">
-      <img src="ambiente2.jpg" alt="Ambiente 2">
-      <img src="ambiente3.jpg" alt="Ambiente 3">
-      <img src="ambiente4.jpg" alt="Ambiente 4">
+      <img src="ambiente1.jpg" alt="Ambiente 1" />
+      <img src="ambiente2.jpg" alt="Ambiente 2" />
+      <img src="ambiente3.jpg" alt="Ambiente 3" />
+      <img src="ambiente4.jpg" alt="Ambiente 4" />
     </div>
   </section>
 
   <!-- CONTATO -->
   <section id="contato">
     <h2>Contato</h2>
-    <a href="https://wa.me/SEU_NUMERO" target="_blank"> <img src="img/whatsapp.png"></a> |
-    <a href="https://www.instagram.com/vivace.rolandia/reels/" target="_blank"><img src="img/instagram.png"></a>
+    <a href="https://wa.me/5511999999999" target="_blank"><img src="img/whatsapp.png" alt="WhatsApp" /></a>
+    |
+    <a href="https://www.instagram.com/vivace.rolandia/reels/" target="_blank"><img src="img/instagram.png" alt="Instagram" /></a>
   </section>
 
+  <!-- RODAPÉ -->
   <footer>
-    <p>©️ 2025 Alegro Vivace. Todos os direitos reservados.</p>
+    <p>©️ 2025 Allegro Vivace. Todos os direitos reservados.</p>
   </footer>
 
-  <script src="script.js">
-    
-    // Menu hambúrguer
-const menuToggle = document.getElementById('mobile-menu');
-const navMenu = document.getElementById('nav-menu');
-
-menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
-
-// Botões de produtos
-const produtos = document.querySelectorAll('.produto-btn');
-const imagemPrincipal = document.getElementById('imagem-principal');
-
-produtos.forEach(botao => {
-    botao.addEventListener('click', () => {
-        const imgs = botao.getAttribute('data-img').split(','); // múltiplas imagens
-        if (imagemPrincipal) {
-            imagemPrincipal.src = imgs[0]; // mostra a primeira imagem
-            // Aqui você pode adicionar lógica para mostrar todas as imagens na seção de produtos
-        }
-        document.getElementById('produtos')?.scrollIntoView({ behavior: 'smooth' });
-    });
-});
-
-  </script>
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
 </body>
 </html>
